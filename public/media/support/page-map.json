@@ -1,0 +1,172 @@
+[
+  {
+    "id": "home",
+    "title": "Home",
+    "route": "/",
+    "assets": [
+      "01-hero-hospital",
+      "02-mission-rural-family",
+      "03-mission-disability-rehab",
+      "04-programme-eye-care",
+      "05-programme-rural-health-camp",
+      "06-programme-prachi-first-aid",
+      "07-care-journey-cutout",
+      "08-partnership-landscape"
+    ],
+    "vectors": [
+      "dividers",
+      "icons"
+    ],
+    "device_note": "Desktop split hero and photo mosaic; mobile full-bleed hero and selected portrait panels."
+  },
+  {
+    "id": "hospital",
+    "title": "Our Hospital",
+    "route": "/hospital",
+    "assets": [
+      "09-hospital-purpose",
+      "02-mission-rural-family",
+      "03-mission-disability-rehab",
+      "04-programme-eye-care",
+      "07-care-journey-cutout",
+      "08-partnership-landscape",
+      "10-adult-rehabilitation"
+    ],
+    "vectors": [
+      "masks/purpose-hands-photo-mask.svg",
+      "placeholders"
+    ],
+    "device_note": "Desktop panoramic purpose imagery and loop explorer; mobile stacked portrait and vertical selectors."
+  },
+  {
+    "id": "care",
+    "title": "Care & Services",
+    "route": "/care",
+    "assets": [
+      "10-adult-rehabilitation",
+      "11-mental-health-counselling",
+      "12-wound-foot-consultation",
+      "13-dialysis-unit",
+      "04-programme-eye-care",
+      "02-mission-rural-family",
+      "07-care-journey-cutout"
+    ],
+    "vectors": [
+      "icons",
+      "motion"
+    ],
+    "device_note": "Desktop service explorer; mobile selected service image and touch-friendly accordion. Use images as content, not clinical instructions."
+  },
+  {
+    "id": "work",
+    "title": "Our Work",
+    "route": "/work",
+    "assets": [
+      "04-programme-eye-care",
+      "05-programme-rural-health-camp",
+      "06-programme-prachi-first-aid",
+      "03-mission-disability-rehab",
+      "08-partnership-landscape"
+    ],
+    "vectors": [
+      "dividers",
+      "icons"
+    ],
+    "device_note": "Desktop filmstrip; mobile 4:3 programme slides. The first-aid file is a poster/still, not a real programme video."
+  },
+  {
+    "id": "locations",
+    "title": "Locations & Outreach",
+    "route": "/network",
+    "assets": [
+      "01-hero-hospital",
+      "08-partnership-landscape",
+      "05-programme-rural-health-camp",
+      "07-care-journey-cutout"
+    ],
+    "vectors": [
+      "motion",
+      "icons"
+    ],
+    "device_note": "Illustrative network only. Campus addresses, maps and branch photographs must come from verified hospital sources."
+  },
+  {
+    "id": "health-card",
+    "title": "Health-Card Initiative",
+    "route": "/health-card",
+    "assets": [
+      "23-health-card-registration",
+      "21-hospital-it-systems",
+      "02-mission-rural-family"
+    ],
+    "vectors": [
+      "cards/health-card-front.svg",
+      "cards/health-card-back.svg",
+      "icons"
+    ],
+    "device_note": "Physical-card art keeps its intrinsic aspect ratio on all devices; stage layout and registration photograph reflow."
+  },
+  {
+    "id": "csr",
+    "title": "CSR & Institutional Partnerships",
+    "route": "/funding",
+    "assets": [
+      "09-hospital-purpose",
+      "24-clinical-partnership-team",
+      "10-adult-rehabilitation",
+      "13-dialysis-unit",
+      "14-intensive-care-unit",
+      "19-diagnostic-laboratory",
+      "08-partnership-landscape"
+    ],
+    "vectors": [
+      "covers",
+      "icons",
+      "motion"
+    ],
+    "device_note": "Use the need explorer and document rows, never a retail product grid. Covers are artwork for the supplied DOCX proposals."
+  },
+  {
+    "id": "programme",
+    "title": "Individual Programme Brief",
+    "route": "/funding/[programme]",
+    "assets": [
+      "02-mission-rural-family",
+      "10-adult-rehabilitation",
+      "12-wound-foot-consultation",
+      "13-dialysis-unit",
+      "14-intensive-care-unit",
+      "15-operation-theatre",
+      "16-ct-imaging",
+      "17-digital-xray",
+      "18-carm-imaging",
+      "19-diagnostic-laboratory",
+      "20-reception-administration",
+      "21-hospital-it-systems",
+      "22-advanced-ambulance",
+      "25-emergency-casualty"
+    ],
+    "vectors": [
+      "covers",
+      "icons",
+      "masks/clinical-room-window.svg"
+    ],
+    "device_note": "Use the programme mapping for all fifteen briefs. Desktop wide room imagery; mobile 4:3 room views or portrait people scenes."
+  },
+  {
+    "id": "contact",
+    "title": "Contact & Collaborate",
+    "route": "/contact",
+    "assets": [
+      "07-care-journey-cutout",
+      "20-reception-administration",
+      "24-clinical-partnership-team",
+      "08-partnership-landscape"
+    ],
+    "vectors": [
+      "icons",
+      "masks/hero-arch-right.svg"
+    ],
+    "device_note": "Desktop split enquiry context; mobile stacked imagery and form. Keep fields and confirmations as HTML."
+  }
+]

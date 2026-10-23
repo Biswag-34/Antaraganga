@@ -1,0 +1,13 @@
+/* Import fonts/fonts.css from the asset root. */
+:root{--hospital-navy:#12344A;--hospital-teal:#087F8C;--hospital-ice:#EAF5F7;--hospital-gold:#D6A53A;--hospital-slate:#516674}
+.media-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.media-cutout{display:block;width:100%;height:auto;object-fit:contain}
+.media-room{aspect-ratio:16/9}.media-person{aspect-ratio:16/9}
+.hero-arch{mask-image:url('../masks/hero-arch-right.svg');mask-size:100% 100%;mask-repeat:no-repeat}
+.photo-circle{mask-image:url('../masks/circle-photo-window.svg');mask-size:100% 100%;mask-repeat:no-repeat;aspect-ratio:1}
+@media(max-width:1023px){.media-room{aspect-ratio:4/3}}
+@media(max-width:767px){.media-person{aspect-ratio:4/5}.hero-arch{mask-image:none}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* Use <picture>: mobile source max-width:767px; tablet source max-width:1023px; desktop default.
+ Preserve physical health-card SVG proportions. Overlay text and interactive controls as HTML.
+*/

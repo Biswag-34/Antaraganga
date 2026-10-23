@@ -1,0 +1,1510 @@
+{
+  "version": "2.0",
+  "created": "2026-10-23",
+  "scope": "Complete illustrative media collection for the nine-page website and fifteen funding programmes",
+  "breakpoints": {
+    "mobile": "0\u2013767px",
+    "tablet": "768\u20131023px",
+    "desktop": "1024px and above"
+  },
+  "tablet_policy": "Tablet files are labelled selections from desktop or mobile compositions, with origin recorded per asset. They are not independent new photographs.",
+  "palette": {
+    "navy": "#12344A",
+    "teal": "#087F8C",
+    "white": "#FFFFFF",
+    "ice": "#EAF5F7",
+    "gold": "#D6A53A",
+    "slate": "#516674"
+  },
+  "typography": {
+    "hero": "Source Serif 4 Semibold",
+    "interface": "DM Sans"
+  },
+  "images": [
+    {
+      "id": "01-hero-hospital",
+      "title": "Hospital hero",
+      "section": "Hero / architectural identity",
+      "alt": "Architectural visual of Antharagange hospital, showing its facade and entrance.",
+      "usage": "Use the transparent desktop image at the right of the hero, with copy in the curved negative space. Mobile uses the full-bleed 4:3 version above the heading. Keep the original aspect ratio on cutouts; do not crop their alpha boundary.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-adapted existing hospital architectural rendering",
+      "variants": {
+        "desktop": {
+          "png": "desktop/01-hero-hospital.png",
+          "webp": "desktop/01-hero-hospital.webp",
+          "width": 1606,
+          "height": 979,
+          "has_transparency": true,
+          "png_bytes": 2118092,
+          "webp_bytes": 269516,
+          "sha256": "ccc6ae88c53b19c21aacae28272c16d3bb687155438798ecb08129d6e3dca18c"
+        },
+        "mobile": {
+          "png": "mobile/01-hero-hospital.png",
+          "webp": "mobile/01-hero-hospital.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2340023,
+          "webp_bytes": 290672,
+          "sha256": "a12ad65268a7745d01b8b694ea3bf2aa692bea1cc9d282f23fb830754560e77d"
+        },
+        "tablet": {
+          "webp": "tablet/01-hero-hospital.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "locations"
+      ]
+    },
+    {
+      "id": "02-mission-rural-family",
+      "title": "Rural-first care",
+      "section": "Purpose mosaic / Rural-first tab",
+      "alt": "Illustrative image of a rural family speaking with a clinician.",
+      "usage": "Use inside the expandable Rural-first photo panel. On mobile, use the portrait image for the selected panel. Place the caption in HTML with an optional CSS overlay.",
+      "focal_position": "50% 45%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/02-mission-rural-family.png",
+          "webp": "desktop/02-mission-rural-family.webp",
+          "width": 1536,
+          "height": 1024,
+          "has_transparency": false,
+          "png_bytes": 2333737,
+          "webp_bytes": 219274,
+          "sha256": "c58be72f7716d00f99e77fb0412c851b3af7bb1ed181b8f25a78e1ede7feb551"
+        },
+        "mobile": {
+          "png": "mobile/02-mission-rural-family.png",
+          "webp": "mobile/02-mission-rural-family.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 2346160,
+          "webp_bytes": 240534,
+          "sha256": "22fc4b09c4cbc95d7df9382f51266a5ce7ca16a416e8a5a4772cb49e84503801"
+        },
+        "tablet": {
+          "webp": "tablet/02-mission-rural-family.webp",
+          "width": 1122,
+          "height": 1402,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "hospital",
+        "care",
+        "health-card",
+        "programme"
+      ]
+    },
+    {
+      "id": "03-mission-disability-rehab",
+      "title": "Disability-first rehabilitation",
+      "section": "Purpose mosaic / Disability-first tab",
+      "alt": "Illustrative image of a physiotherapist encouraging a boy who uses a wheelchair.",
+      "usage": "Use as the central expanded mission image. Keep both faces and the wheelchair visible. The portrait mobile image is composed for an approximately 4:5 container.",
+      "focal_position": "55% 45%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/03-mission-disability-rehab.png",
+          "webp": "desktop/03-mission-disability-rehab.webp",
+          "width": 1536,
+          "height": 1024,
+          "has_transparency": false,
+          "png_bytes": 2207580,
+          "webp_bytes": 205264,
+          "sha256": "2c0a287c70143688aeedb6fb84a3907eb385b770afc74b39694fbcf8d6e669bf"
+        },
+        "mobile": {
+          "png": "mobile/03-mission-disability-rehab.png",
+          "webp": "mobile/03-mission-disability-rehab.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 2273277,
+          "webp_bytes": 211158,
+          "sha256": "3f32e8a09a7d8721b0821793b9e44cc579edb16c1d06631c6ad0e05688ba15fa"
+        },
+        "tablet": {
+          "webp": "tablet/03-mission-disability-rehab.webp",
+          "width": 1122,
+          "height": 1402,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "hospital",
+        "work"
+      ]
+    },
+    {
+      "id": "04-programme-eye-care",
+      "title": "Eye-care screening",
+      "section": "Purpose mosaic / Community-first AND Our Work / Eye care",
+      "alt": "Illustrative image of a clinician performing an eye screening with an older man.",
+      "usage": "Reuse this same asset for the Community-first mosaic panel and the Meenakshi programme slide. Wide desktop and 4:3 mobile files are provided. Do not describe it as a photograph from an actual hospital camp.",
+      "focal_position": "50% 45%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/04-programme-eye-care.png",
+          "webp": "desktop/04-programme-eye-care.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2128003,
+          "webp_bytes": 169518,
+          "sha256": "33cb4a3e2f2d6a4b81473872d99d34ea1697723c4df82415ad5a2562e30cd2d1"
+        },
+        "mobile": {
+          "png": "mobile/04-programme-eye-care.png",
+          "webp": "mobile/04-programme-eye-care.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2025560,
+          "webp_bytes": 153038,
+          "sha256": "bd066291ef850f5161a9d048468526ee729c4570b6f4ed568ce47d5a34818204"
+        },
+        "tablet": {
+          "webp": "tablet/04-programme-eye-care.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "hospital",
+        "care",
+        "work"
+      ]
+    },
+    {
+      "id": "05-programme-rural-health-camp",
+      "title": "Rural health camp",
+      "section": "Our Work / Rural health camps slide",
+      "alt": "Illustrative image of blood-pressure screening at a rural community health camp.",
+      "usage": "Second programme slide. Keep the nurse, cuff and patient in the crop. Use the wider contextual image on desktop and the 4:3 mobile composition on small screens.",
+      "focal_position": "48% 45%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/05-programme-rural-health-camp.png",
+          "webp": "desktop/05-programme-rural-health-camp.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2442545,
+          "webp_bytes": 258736,
+          "sha256": "bfcef5b95b79c8d26c6149ee94519c5df18d8783e07c9610509c21b55c2ed88f"
+        },
+        "mobile": {
+          "png": "mobile/05-programme-rural-health-camp.png",
+          "webp": "mobile/05-programme-rural-health-camp.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2343079,
+          "webp_bytes": 250678,
+          "sha256": "e03b6263ee863d1d4a0194f9298b3056fec49f5b5b265529a4c184e255d8add6"
+        },
+        "tablet": {
+          "webp": "tablet/05-programme-rural-health-camp.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "work",
+        "locations"
+      ]
+    },
+    {
+      "id": "06-programme-prachi-first-aid",
+      "title": "PraChi first-aid training",
+      "section": "Our Work / PraChi slide",
+      "alt": "Illustrative image of an adult first-aid workshop using a CPR training manikin.",
+      "usage": "Third programme slide. This is educational imagery of a manikin, not an actual emergency or recorded PraChi event. Keep the instructor hands and the training torso visible.",
+      "focal_position": "50% 45%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/06-programme-prachi-first-aid.png",
+          "webp": "desktop/06-programme-prachi-first-aid.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2205558,
+          "webp_bytes": 202464,
+          "sha256": "2f2cac248a749438662bce10839152c908e2f117695c0c72c72f23af61b3a080"
+        },
+        "mobile": {
+          "png": "mobile/06-programme-prachi-first-aid.png",
+          "webp": "mobile/06-programme-prachi-first-aid.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2108596,
+          "webp_bytes": 178678,
+          "sha256": "2b52428bb1122131f7762ccd0ea8d4e731d9fcbe06417171d446d459aeb86281"
+        },
+        "tablet": {
+          "webp": "tablet/06-programme-prachi-first-aid.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "work"
+      ]
+    },
+    {
+      "id": "07-care-journey-cutout",
+      "title": "Clinician and patient cutout",
+      "section": "Connected care / consultation-treatment-rehabilitation section",
+      "alt": "Illustrative image of a doctor listening to an older patient.",
+      "usage": "Desktop cutout sits on the right of a navy section, allowing care-path content on the left. The mobile portrait cutout is optional: place after the heading or below the vertical pathway; it can be omitted to match the leaner reference mobile layout. Preserve intrinsic ratio and alpha.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/07-care-journey-cutout.png",
+          "webp": "desktop/07-care-journey-cutout.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": true,
+          "png_bytes": 1420915,
+          "webp_bytes": 201620,
+          "sha256": "9ee5b6940276577899bcc5f3bfdac7a6e7d0b0f0086e0ec908f820ac9f19814b"
+        },
+        "mobile": {
+          "png": "mobile/07-care-journey-cutout.png",
+          "webp": "mobile/07-care-journey-cutout.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": true,
+          "png_bytes": 1771554,
+          "webp_bytes": 215030,
+          "sha256": "741e8a4be6b4de22465f00609b3c7b64a34f66ecef10ecad9dfe8ec7fef953a0"
+        },
+        "tablet": {
+          "webp": "tablet/07-care-journey-cutout.webp",
+          "width": 1122,
+          "height": 1402,
+          "selected_from": "mobile",
+          "has_transparency": true,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "hospital",
+        "care",
+        "locations",
+        "contact"
+      ]
+    },
+    {
+      "id": "08-partnership-landscape",
+      "title": "Community landscape vignette",
+      "section": "Closing partnership invitation",
+      "alt": "Illustrative rural Karnataka landscape with rocky hills, greenery and village buildings.",
+      "usage": "Desktop has transparent left and upper edges for a white text-led section. Mobile has a transparent upper edge and should sit below the partnership links. Representative regional imagery, not a verified view from the campus or a branch map.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/08-partnership-landscape.png",
+          "webp": "desktop/08-partnership-landscape.webp",
+          "width": 1663,
+          "height": 946,
+          "has_transparency": true,
+          "png_bytes": 2337415,
+          "webp_bytes": 501888,
+          "sha256": "7c5f9d0895210371c92f562bd15cb4bb951b2d7e4a73d0c1850a1dc52eccf4d1"
+        },
+        "mobile": {
+          "png": "mobile/08-partnership-landscape.png",
+          "webp": "mobile/08-partnership-landscape.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": true,
+          "png_bytes": 3008063,
+          "webp_bytes": 564370,
+          "sha256": "310ae7ad112252d87263de93744ac218b7e03b67e16002ac13f6c342bb769d88"
+        },
+        "tablet": {
+          "webp": "tablet/08-partnership-landscape.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": true,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "home",
+        "hospital",
+        "work",
+        "locations",
+        "csr",
+        "contact"
+      ]
+    },
+    {
+      "id": "09-hospital-purpose",
+      "title": "Hospital Purpose",
+      "section": "about",
+      "alt": "Illustrative image: Adult wheelchair user and family speaking with a clinician.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/09-hospital-purpose.png",
+          "webp": "desktop/09-hospital-purpose.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2183361,
+          "webp_bytes": 178348,
+          "sha256": "d2feb602d20543e565a59838497eb62eba5c2cac9029956358b234a770082f59"
+        },
+        "mobile": {
+          "png": "mobile/09-hospital-purpose.png",
+          "webp": "mobile/09-hospital-purpose.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 2196208,
+          "webp_bytes": 193400,
+          "sha256": "10a7bab73ccc401c4471fc4206ff83f8beb7756fb95770c865614da45db66fc6"
+        },
+        "tablet": {
+          "webp": "tablet/09-hospital-purpose.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "hospital",
+        "csr"
+      ]
+    },
+    {
+      "id": "10-adult-rehabilitation",
+      "title": "Adult Rehabilitation",
+      "section": "care",
+      "alt": "Illustrative image: Adult patient practising supported mobility with a physiotherapist.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/10-adult-rehabilitation.png",
+          "webp": "desktop/10-adult-rehabilitation.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2046777,
+          "webp_bytes": 161096,
+          "sha256": "a51ff809a58bdb3d3705194b0877cbd4121a03d12fa1590715a979f546f53704"
+        },
+        "mobile": {
+          "png": "mobile/10-adult-rehabilitation.png",
+          "webp": "mobile/10-adult-rehabilitation.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 2067094,
+          "webp_bytes": 161288,
+          "sha256": "e5a948d010d871ae1c89c6df24feee86d3dcb28f6c6ae5a5812dafffa847f3c0"
+        },
+        "tablet": {
+          "webp": "tablet/10-adult-rehabilitation.webp",
+          "width": 1122,
+          "height": 1402,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "hospital",
+        "care",
+        "csr",
+        "programme"
+      ]
+    },
+    {
+      "id": "11-mental-health-counselling",
+      "title": "Mental Health Counselling",
+      "section": "care",
+      "alt": "Illustrative image: Two adults in a calm counselling conversation.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/11-mental-health-counselling.png",
+          "webp": "desktop/11-mental-health-counselling.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2246502,
+          "webp_bytes": 192098,
+          "sha256": "407545203cac1303edf1c50207358dadbdae657a6bf98d3bad4c61d6d990d7e3"
+        },
+        "mobile": {
+          "png": "mobile/11-mental-health-counselling.png",
+          "webp": "mobile/11-mental-health-counselling.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 2321107,
+          "webp_bytes": 228712,
+          "sha256": "e7f5c83d78f2f52dcab0c4f85fb9a92229abb18c8a4235149c5e21b44d27035d"
+        },
+        "tablet": {
+          "webp": "tablet/11-mental-health-counselling.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "care"
+      ]
+    },
+    {
+      "id": "12-wound-foot-consultation",
+      "title": "Wound Foot Consultation",
+      "section": "care",
+      "alt": "Illustrative image: Non-graphic foot-risk assessment in a clinical consultation.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/12-wound-foot-consultation.png",
+          "webp": "desktop/12-wound-foot-consultation.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2293013,
+          "webp_bytes": 221734,
+          "sha256": "3f2310d503e98fa60aa23365522ee3d1e5dd44e79b511e9059ac7512cce61213"
+        },
+        "mobile": {
+          "png": "mobile/12-wound-foot-consultation.png",
+          "webp": "mobile/12-wound-foot-consultation.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2268590,
+          "webp_bytes": 232292,
+          "sha256": "a410139be91bae114800aa0a7f34dbbefa3d70d16f328efe5a82bf12d788a17e"
+        },
+        "tablet": {
+          "webp": "tablet/12-wound-foot-consultation.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "care",
+        "programme"
+      ]
+    },
+    {
+      "id": "13-dialysis-unit",
+      "title": "Dialysis Unit",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative three-station dialysis treatment space.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/13-dialysis-unit.png",
+          "webp": "desktop/13-dialysis-unit.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2146580,
+          "webp_bytes": 198490,
+          "sha256": "efac19fe48955c56c4974602af61fe4c825e305351721b968557eee5d0d5833d"
+        },
+        "mobile": {
+          "png": "mobile/13-dialysis-unit.png",
+          "webp": "mobile/13-dialysis-unit.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2169695,
+          "webp_bytes": 212394,
+          "sha256": "8b427d3c1a2dd6cf8a91a2e83a78ff092bcc7e46478ad325f883c81c579cf1cd"
+        },
+        "tablet": {
+          "webp": "tablet/13-dialysis-unit.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "care",
+        "csr",
+        "programme"
+      ]
+    },
+    {
+      "id": "14-intensive-care-unit",
+      "title": "Intensive Care Unit",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative critical-care room with beds and monitoring equipment.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/14-intensive-care-unit.png",
+          "webp": "desktop/14-intensive-care-unit.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2116253,
+          "webp_bytes": 190990,
+          "sha256": "ac250a59231e5bc911375ad02496879ae0da2e37ebc8ba3614d9cdb2056561e1"
+        },
+        "mobile": {
+          "png": "mobile/14-intensive-care-unit.png",
+          "webp": "mobile/14-intensive-care-unit.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2182389,
+          "webp_bytes": 225026,
+          "sha256": "91020bf566af7263957df59ba74437cd90effa6ae7465c7ffc67824b6833b226"
+        },
+        "tablet": {
+          "webp": "tablet/14-intensive-care-unit.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "csr",
+        "programme"
+      ]
+    },
+    {
+      "id": "15-operation-theatre",
+      "title": "Operation Theatre",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative operating theatre with surgical and anaesthesia equipment.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/15-operation-theatre.png",
+          "webp": "desktop/15-operation-theatre.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2036747,
+          "webp_bytes": 180110,
+          "sha256": "191e1d3641c32b0831ad035864ea77c28c37eb0a46dbc7d3261c305e49d587b2"
+        },
+        "mobile": {
+          "png": "mobile/15-operation-theatre.png",
+          "webp": "mobile/15-operation-theatre.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2099039,
+          "webp_bytes": 219280,
+          "sha256": "7762e7cbde4aadd78c6ed0fb0101272cc79320d6a21cb9f083b2e4e13f34b4f0"
+        },
+        "tablet": {
+          "webp": "tablet/15-operation-theatre.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme"
+      ]
+    },
+    {
+      "id": "16-ct-imaging",
+      "title": "Ct Imaging",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative CT imaging room.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/16-ct-imaging.png",
+          "webp": "desktop/16-ct-imaging.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2065978,
+          "webp_bytes": 165612,
+          "sha256": "ef4496303e7a2e080519d00a37e883cba5bdc0add1b21746a7e6c577d00aa58b"
+        },
+        "mobile": {
+          "png": "mobile/16-ct-imaging.png",
+          "webp": "mobile/16-ct-imaging.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2119794,
+          "webp_bytes": 180694,
+          "sha256": "6bef1af8dade6d18cd3abdbe9054efe10161031315b042eb4e1a961602e8a310"
+        },
+        "tablet": {
+          "webp": "tablet/16-ct-imaging.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme"
+      ]
+    },
+    {
+      "id": "17-digital-xray",
+      "title": "Digital Xray",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative digital X-ray room.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/17-digital-xray.png",
+          "webp": "desktop/17-digital-xray.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 1919583,
+          "webp_bytes": 125266,
+          "sha256": "4234c6675964f7c4d0d427c9323b049843ccfb474bcb817b11e6c660b42d3239"
+        },
+        "mobile": {
+          "png": "mobile/17-digital-xray.png",
+          "webp": "mobile/17-digital-xray.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2121058,
+          "webp_bytes": 180944,
+          "sha256": "be9d14bb666db5214f8ed7dcd7115fe73b5e654574de75e3b8223ba90f963df6"
+        },
+        "tablet": {
+          "webp": "tablet/17-digital-xray.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme"
+      ]
+    },
+    {
+      "id": "18-carm-imaging",
+      "title": "Carm Imaging",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative C-Arm imaging system in an operating-theatre setting.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/18-carm-imaging.png",
+          "webp": "desktop/18-carm-imaging.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2117765,
+          "webp_bytes": 195878,
+          "sha256": "2fd0759513b69d7cc75c5cdac42af91016f2eb0a260695a08903798be92406a5"
+        },
+        "mobile": {
+          "png": "mobile/18-carm-imaging.png",
+          "webp": "mobile/18-carm-imaging.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2171954,
+          "webp_bytes": 216212,
+          "sha256": "6b8f4c8cc2bc7dde9bf4f87087fd318432023fba2d18dd4595b8ba681f4bce62"
+        },
+        "tablet": {
+          "webp": "tablet/18-carm-imaging.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme"
+      ]
+    },
+    {
+      "id": "19-diagnostic-laboratory",
+      "title": "Diagnostic Laboratory",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative laboratory professional and diagnostic workspace.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/19-diagnostic-laboratory.png",
+          "webp": "desktop/19-diagnostic-laboratory.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 1817751,
+          "webp_bytes": 124380,
+          "sha256": "be2972c774b8254ca672d05bca41c02557d41a959b9f76a1d544af3f66f398ef"
+        },
+        "mobile": {
+          "png": "mobile/19-diagnostic-laboratory.png",
+          "webp": "mobile/19-diagnostic-laboratory.webp",
+          "width": 1051,
+          "height": 1496,
+          "has_transparency": false,
+          "png_bytes": 1820772,
+          "webp_bytes": 123260,
+          "sha256": "78528cbbaed6d8f0d200ec6b9e97eec6eaca47ea7b0bf1a8c9628f659e842b6b"
+        },
+        "tablet": {
+          "webp": "tablet/19-diagnostic-laboratory.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "csr",
+        "programme"
+      ]
+    },
+    {
+      "id": "20-reception-administration",
+      "title": "Reception Administration",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative accessible hospital reception and waiting area.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/20-reception-administration.png",
+          "webp": "desktop/20-reception-administration.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 1977409,
+          "webp_bytes": 163324,
+          "sha256": "42bb6328436c18f8ef816a3498bf142a306b69d0c03db7a01d79775b0a2b8655"
+        },
+        "mobile": {
+          "png": "mobile/20-reception-administration.png",
+          "webp": "mobile/20-reception-administration.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 2052217,
+          "webp_bytes": 173040,
+          "sha256": "8e5babcfe644141faa1febe6377a02aafbc06fc29f095b6086f63ef7108cfabb"
+        },
+        "tablet": {
+          "webp": "tablet/20-reception-administration.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme",
+        "contact"
+      ]
+    },
+    {
+      "id": "21-hospital-it-systems",
+      "title": "Hospital It Systems",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative hospital staff using a registration workstation.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/21-hospital-it-systems.png",
+          "webp": "desktop/21-hospital-it-systems.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 1954261,
+          "webp_bytes": 156062,
+          "sha256": "2ada1633b51c898812f7efbd18d588374cd89240170cb92ad45368c287ca1b21"
+        },
+        "mobile": {
+          "png": "mobile/21-hospital-it-systems.png",
+          "webp": "mobile/21-hospital-it-systems.webp",
+          "width": 1073,
+          "height": 1466,
+          "has_transparency": false,
+          "png_bytes": 1945713,
+          "webp_bytes": 162194,
+          "sha256": "7f64bfbe840e578f05c336832836ddf503286161f49566d28abf69d4520b4fd4"
+        },
+        "tablet": {
+          "webp": "tablet/21-hospital-it-systems.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "health-card",
+        "programme"
+      ]
+    },
+    {
+      "id": "22-advanced-ambulance",
+      "title": "Advanced Ambulance",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative ambulance with patient-transfer equipment.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/22-advanced-ambulance.png",
+          "webp": "desktop/22-advanced-ambulance.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2505284,
+          "webp_bytes": 304504,
+          "sha256": "436bb6005e1ca61890b2a7128554ac619f64877fc4d9940e747c766591d6494c"
+        },
+        "mobile": {
+          "png": "mobile/22-advanced-ambulance.png",
+          "webp": "mobile/22-advanced-ambulance.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2340649,
+          "webp_bytes": 291730,
+          "sha256": "c4cfe0fae1e2a42ca13cb31f12011cf99607b93d3354f5166ab2550d4f1d4f2f"
+        },
+        "tablet": {
+          "webp": "tablet/22-advanced-ambulance.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme"
+      ]
+    },
+    {
+      "id": "23-health-card-registration",
+      "title": "Health Card Registration",
+      "section": "health-card",
+      "alt": "Illustrative image: Illustrative clinic staff assisting with patient registration and a sample card.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/23-health-card-registration.png",
+          "webp": "desktop/23-health-card-registration.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2130267,
+          "webp_bytes": 179630,
+          "sha256": "2a5475049f4088d14250440a1100df8d45caaa2d91692a229b9d48a0350cf4d7"
+        },
+        "mobile": {
+          "png": "mobile/23-health-card-registration.png",
+          "webp": "mobile/23-health-card-registration.webp",
+          "width": 1073,
+          "height": 1466,
+          "has_transparency": false,
+          "png_bytes": 1988512,
+          "webp_bytes": 147250,
+          "sha256": "349966d527c755343c229940a2f273913b689b2269d23e2c5a7d31474331c96f"
+        },
+        "tablet": {
+          "webp": "tablet/23-health-card-registration.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "health-card"
+      ]
+    },
+    {
+      "id": "24-clinical-partnership-team",
+      "title": "Clinical Partnership Team",
+      "section": "partnership",
+      "alt": "Illustrative image: Illustrative healthcare team discussing a clinical programme.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/24-clinical-partnership-team.png",
+          "webp": "desktop/24-clinical-partnership-team.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2133134,
+          "webp_bytes": 172632,
+          "sha256": "5d8d4b9f52b5969dfda101d7eb2fe6f317d5c75fdb63176893f22281ce8c0fa8"
+        },
+        "mobile": {
+          "png": "mobile/24-clinical-partnership-team.png",
+          "webp": "mobile/24-clinical-partnership-team.webp",
+          "width": 1122,
+          "height": 1402,
+          "has_transparency": false,
+          "png_bytes": 1992179,
+          "webp_bytes": 150524,
+          "sha256": "050435054bbc62f3dfa02fa528629f78cc2f0ed08441b71679bfb2609210186b"
+        },
+        "tablet": {
+          "webp": "tablet/24-clinical-partnership-team.webp",
+          "width": 1672,
+          "height": 941,
+          "selected_from": "desktop",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "csr",
+        "contact"
+      ]
+    },
+    {
+      "id": "25-emergency-casualty",
+      "title": "Emergency Casualty",
+      "section": "programme",
+      "alt": "Illustrative image: Illustrative emergency assessment and observation area.",
+      "usage": "Use the dedicated mobile composition in narrow layouts. Apply shaped masks in CSS only where the page calls for them. Room/equipment imagery is representative, not a final room plan or actual commissioned facility.",
+      "focal_position": "50% 50%",
+      "provenance": "AI-generated representative imagery",
+      "variants": {
+        "desktop": {
+          "png": "desktop/25-emergency-casualty.png",
+          "webp": "desktop/25-emergency-casualty.webp",
+          "width": 1672,
+          "height": 941,
+          "has_transparency": false,
+          "png_bytes": 2101467,
+          "webp_bytes": 189396,
+          "sha256": "e736795194ecd77e33d8b3032f8d61bcecfc8dc6cba46623e0dad6f6a0e325e7"
+        },
+        "mobile": {
+          "png": "mobile/25-emergency-casualty.png",
+          "webp": "mobile/25-emergency-casualty.webp",
+          "width": 1448,
+          "height": 1086,
+          "has_transparency": false,
+          "png_bytes": 2137192,
+          "webp_bytes": 218080,
+          "sha256": "6b7e6e15b907e05814ec3c64d81dd1e36f681a81777443567003631ead211191"
+        },
+        "tablet": {
+          "webp": "tablet/25-emergency-casualty.webp",
+          "width": 1448,
+          "height": 1086,
+          "selected_from": "mobile",
+          "has_transparency": false,
+          "note": "Reuse of the most suitable existing composition, not a third independently generated scene."
+        }
+      },
+      "pages": [
+        "programme"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "title": "Home",
+      "route": "/",
+      "assets": [
+        "01-hero-hospital",
+        "02-mission-rural-family",
+        "03-mission-disability-rehab",
+        "04-programme-eye-care",
+        "05-programme-rural-health-camp",
+        "06-programme-prachi-first-aid",
+        "07-care-journey-cutout",
+        "08-partnership-landscape"
+      ],
+      "vectors": [
+        "dividers",
+        "icons"
+      ],
+      "device_note": "Desktop split hero and photo mosaic; mobile full-bleed hero and selected portrait panels."
+    },
+    {
+      "id": "hospital",
+      "title": "Our Hospital",
+      "route": "/hospital",
+      "assets": [
+        "09-hospital-purpose",
+        "02-mission-rural-family",
+        "03-mission-disability-rehab",
+        "04-programme-eye-care",
+        "07-care-journey-cutout",
+        "08-partnership-landscape",
+        "10-adult-rehabilitation"
+      ],
+      "vectors": [
+        "masks/purpose-hands-photo-mask.svg",
+        "placeholders"
+      ],
+      "device_note": "Desktop panoramic purpose imagery and loop explorer; mobile stacked portrait and vertical selectors."
+    },
+    {
+      "id": "care",
+      "title": "Care & Services",
+      "route": "/care",
+      "assets": [
+        "10-adult-rehabilitation",
+        "11-mental-health-counselling",
+        "12-wound-foot-consultation",
+        "13-dialysis-unit",
+        "04-programme-eye-care",
+        "02-mission-rural-family",
+        "07-care-journey-cutout"
+      ],
+      "vectors": [
+        "icons",
+        "motion"
+      ],
+      "device_note": "Desktop service explorer; mobile selected service image and touch-friendly accordion. Use images as content, not clinical instructions."
+    },
+    {
+      "id": "work",
+      "title": "Our Work",
+      "route": "/work",
+      "assets": [
+        "04-programme-eye-care",
+        "05-programme-rural-health-camp",
+        "06-programme-prachi-first-aid",
+        "03-mission-disability-rehab",
+        "08-partnership-landscape"
+      ],
+      "vectors": [
+        "dividers",
+        "icons"
+      ],
+      "device_note": "Desktop filmstrip; mobile 4:3 programme slides. The first-aid file is a poster/still, not a real programme video."
+    },
+    {
+      "id": "locations",
+      "title": "Locations & Outreach",
+      "route": "/network",
+      "assets": [
+        "01-hero-hospital",
+        "08-partnership-landscape",
+        "05-programme-rural-health-camp",
+        "07-care-journey-cutout"
+      ],
+      "vectors": [
+        "motion",
+        "icons"
+      ],
+      "device_note": "Illustrative network only. Campus addresses, maps and branch photographs must come from verified hospital sources."
+    },
+    {
+      "id": "health-card",
+      "title": "Health-Card Initiative",
+      "route": "/health-card",
+      "assets": [
+        "23-health-card-registration",
+        "21-hospital-it-systems",
+        "02-mission-rural-family"
+      ],
+      "vectors": [
+        "cards/health-card-front.svg",
+        "cards/health-card-back.svg",
+        "icons"
+      ],
+      "device_note": "Physical-card art keeps its intrinsic aspect ratio on all devices; stage layout and registration photograph reflow."
+    },
+    {
+      "id": "csr",
+      "title": "CSR & Institutional Partnerships",
+      "route": "/funding",
+      "assets": [
+        "09-hospital-purpose",
+        "24-clinical-partnership-team",
+        "10-adult-rehabilitation",
+        "13-dialysis-unit",
+        "14-intensive-care-unit",
+        "19-diagnostic-laboratory",
+        "08-partnership-landscape"
+      ],
+      "vectors": [
+        "covers",
+        "icons",
+        "motion"
+      ],
+      "device_note": "Use the need explorer and document rows, never a retail product grid. Covers are artwork for the supplied DOCX proposals."
+    },
+    {
+      "id": "programme",
+      "title": "Individual Programme Brief",
+      "route": "/funding/[programme]",
+      "assets": [
+        "02-mission-rural-family",
+        "10-adult-rehabilitation",
+        "12-wound-foot-consultation",
+        "13-dialysis-unit",
+        "14-intensive-care-unit",
+        "15-operation-theatre",
+        "16-ct-imaging",
+        "17-digital-xray",
+        "18-carm-imaging",
+        "19-diagnostic-laboratory",
+        "20-reception-administration",
+        "21-hospital-it-systems",
+        "22-advanced-ambulance",
+        "25-emergency-casualty"
+      ],
+      "vectors": [
+        "covers",
+        "icons",
+        "masks/clinical-room-window.svg"
+      ],
+      "device_note": "Use the programme mapping for all fifteen briefs. Desktop wide room imagery; mobile 4:3 room views or portrait people scenes."
+    },
+    {
+      "id": "contact",
+      "title": "Contact & Collaborate",
+      "route": "/contact",
+      "assets": [
+        "07-care-journey-cutout",
+        "20-reception-administration",
+        "24-clinical-partnership-team",
+        "08-partnership-landscape"
+      ],
+      "vectors": [
+        "icons",
+        "masks/hero-arch-right.svg"
+      ],
+      "device_note": "Desktop split enquiry context; mobile stacked imagery and form. Keep fields and confirmations as HTML."
+    }
+  ],
+  "programmes": [
+    {
+      "id": "it",
+      "title": "Hospital IT systems",
+      "asset": "21-hospital-it-systems",
+      "cover": "covers/it-programme-cover.svg",
+      "source_document": "documents/it.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "mobility",
+      "title": "Disability support equipment",
+      "asset": "10-adult-rehabilitation",
+      "cover": "covers/mobility-programme-cover.svg",
+      "source_document": "documents/mobility.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "reception",
+      "title": "Reception & administration",
+      "asset": "20-reception-administration",
+      "cover": "covers/reception-programme-cover.svg",
+      "source_document": "documents/reception.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "ambulance",
+      "title": "Advanced ambulance",
+      "asset": "22-advanced-ambulance",
+      "cover": "covers/ambulance-programme-cover.svg",
+      "source_document": "documents/ambulance.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "emergency",
+      "title": "Emergency & casualty",
+      "asset": "25-emergency-casualty",
+      "cover": "covers/emergency-programme-cover.svg",
+      "source_document": "documents/emergency.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "dialysis",
+      "title": "3-bed dialysis unit",
+      "asset": "13-dialysis-unit",
+      "cover": "covers/dialysis-programme-cover.svg",
+      "source_document": "documents/dialysis.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "rehab",
+      "title": "Physiotherapy & rehabilitation",
+      "asset": "10-adult-rehabilitation",
+      "cover": "covers/rehab-programme-cover.svg",
+      "source_document": "documents/rehab.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "wound",
+      "title": "Wound & diabetic foot care",
+      "asset": "12-wound-foot-consultation",
+      "cover": "covers/wound-programme-cover.svg",
+      "source_document": "documents/wound.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "ct",
+      "title": "64-slice CT facility",
+      "asset": "16-ct-imaging",
+      "cover": "covers/ct-programme-cover.svg",
+      "source_document": "documents/ct.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "carm",
+      "title": "C-Arm imaging system",
+      "asset": "18-carm-imaging",
+      "cover": "covers/carm-programme-cover.svg",
+      "source_document": "documents/carm.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "xray",
+      "title": "Digital X-ray unit",
+      "asset": "17-digital-xray",
+      "cover": "covers/xray-programme-cover.svg",
+      "source_document": "documents/xray.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "lab",
+      "title": "Diagnostic laboratory",
+      "asset": "19-diagnostic-laboratory",
+      "cover": "covers/lab-programme-cover.svg",
+      "source_document": "documents/lab.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "ot",
+      "title": "Operation theatre",
+      "asset": "15-operation-theatre",
+      "cover": "covers/ot-programme-cover.svg",
+      "source_document": "documents/ot.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "icu",
+      "title": "Intensive care unit",
+      "asset": "14-intensive-care-unit",
+      "cover": "covers/icu-programme-cover.svg",
+      "source_document": "documents/icu.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    },
+    {
+      "id": "opd",
+      "title": "Outpatient department",
+      "asset": "02-mission-rural-family",
+      "cover": "covers/opd-programme-cover.svg",
+      "source_document": "documents/opd.docx",
+      "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+    }
+  ],
+  "vector_files": [
+    "brand/care-mark-concept-on-navy.svg",
+    "brand/care-mark-concept.svg",
+    "brand/favicon.svg",
+    "brand/wordmark-concept.svg",
+    "cards/health-card-back.svg",
+    "cards/health-card-front.svg",
+    "covers/ambulance-programme-cover.svg",
+    "covers/carm-programme-cover.svg",
+    "covers/ct-programme-cover.svg",
+    "covers/dialysis-programme-cover.svg",
+    "covers/emergency-programme-cover.svg",
+    "covers/icu-programme-cover.svg",
+    "covers/it-programme-cover.svg",
+    "covers/lab-programme-cover.svg",
+    "covers/mobility-programme-cover.svg",
+    "covers/opd-programme-cover.svg",
+    "covers/ot-programme-cover.svg",
+    "covers/reception-programme-cover.svg",
+    "covers/rehab-programme-cover.svg",
+    "covers/wound-programme-cover.svg",
+    "covers/xray-programme-cover.svg",
+    "dividers/01-chapter-edge-desktop.svg",
+    "dividers/01-chapter-edge-mobile.svg",
+    "dividers/02-mosaic-to-work-desktop.svg",
+    "dividers/02-mosaic-to-work-mobile.svg",
+    "dividers/03-care-top-desktop.svg",
+    "dividers/03-care-top-mobile.svg",
+    "dividers/04-care-bottom-hands-desktop.svg",
+    "dividers/04-care-bottom-mobile.svg",
+    "dividers/hero-arch-mask-desktop.svg",
+    "dividers/mosaic-bottom-mask-desktop.svg",
+    "dividers/mosaic-bottom-mask-mobile.svg",
+    "icons/ambulance.svg",
+    "icons/arrow-down.svg",
+    "icons/arrow-right.svg",
+    "icons/arrow-up-right.svg",
+    "icons/bed-double.svg",
+    "icons/brain.svg",
+    "icons/briefcase-business.svg",
+    "icons/building2.svg",
+    "icons/calendar.svg",
+    "icons/camera.svg",
+    "icons/check-circle2.svg",
+    "icons/chevron-down.svg",
+    "icons/clipboard-check.svg",
+    "icons/clock.svg",
+    "icons/community-first.svg",
+    "icons/consultation.svg",
+    "icons/copy.svg",
+    "icons/disability-first.svg",
+    "icons/download.svg",
+    "icons/eye-care.svg",
+    "icons/file-text.svg",
+    "icons/first-aid.svg",
+    "icons/flask-conical.svg",
+    "icons/footprints.svg",
+    "icons/graduation-cap.svg",
+    "icons/hand-heart.svg",
+    "icons/heart-handshake.svg",
+    "icons/heart.svg",
+    "icons/id-card.svg",
+    "icons/layers.svg",
+    "icons/life-buoy.svg",
+    "icons/location.svg",
+    "icons/lock-keyhole.svg",
+    "icons/mail.svg",
+    "icons/menu.svg",
+    "icons/microscope.svg",
+    "icons/monitor.svg",
+    "icons/navigation.svg",
+    "icons/network.svg",
+    "icons/next.svg",
+    "icons/partnership.svg",
+    "icons/phone.svg",
+    "icons/play.svg",
+    "icons/plus.svg",
+    "icons/previous.svg",
+    "icons/printer.svg",
+    "icons/radiation.svg",
+    "icons/rehabilitation.svg",
+    "icons/rural-first.svg",
+    "icons/scan-line.svg",
+    "icons/search.svg",
+    "icons/shield-check.svg",
+    "icons/syringe.svg",
+    "icons/treatment.svg",
+    "icons/user-round.svg",
+    "masks/circle-photo-window.svg",
+    "masks/clinical-room-window.svg",
+    "masks/hero-arch-right.svg",
+    "masks/mobile-photo-arch.svg",
+    "masks/panorama-step-edge.svg",
+    "masks/portrait-arch.svg",
+    "masks/purpose-hands-photo-mask.svg",
+    "motion/care-connection-desktop.svg",
+    "motion/care-connection-mobile.svg",
+    "placeholders/leadership-ks.svg",
+    "placeholders/leadership-pn.svg",
+    "placeholders/leadership-sm.svg",
+    "placeholders/leadership-team.svg",
+    "placeholders/leadership-vc.svg",
+    "shared/care-mark-concept-on-navy.svg",
+    "shared/care-mark-concept.svg",
+    "social/default-share-card.svg"
+  ],
+  "runtime_media_guidance": "Still images and SVG/CSS motion are supplied. Real programme video, authentic staff portraits, approved partner logos and verified campus photography require original source material."
+}

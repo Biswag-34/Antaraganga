@@ -1,0 +1,26 @@
+[
+  {
+    "file": "DM-Sans-Variable.ttf",
+    "bytes": 240164,
+    "ok": true,
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz%2Cwght%5D.ttf"
+  },
+  {
+    "file": "DM-Sans-OFL.txt",
+    "bytes": 4482,
+    "ok": true,
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt"
+  },
+  {
+    "file": "Source-Serif-4-Variable.ttf",
+    "bytes": 1209508,
+    "ok": true,
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/SourceSerif4%5Bopsz%2Cwght%5D.ttf"
+  },
+  {
+    "file": "Source-Serif-4-OFL.txt",
+    "bytes": 4400,
+    "ok": true,
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt"
+  }
+]

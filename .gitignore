@@ -1,0 +1,48 @@
+# Installed dependencies and package caches
+node_modules/
+/.npm-cache/
+/.cache/
+
+# Next.js output and generated TypeScript files
+/.next/
+/out/
+/build/
+/dist/
+/next-env.d.ts
+*.tsbuildinfo
+
+# Local environment values (keep safe example files)
+.env*
+!.env.example
+!.env.*.example
+!.env.template
+
+# Original inputs and design references; runtime assets are in public/media/
+/Media/
+/Visualization/
+/Antharagange-Codex-Website-Creation-Manual.md
+
+# Generated audits, extracted source text and local screenshots
+/docs/clickable-inventory*
+/docs/proposal-source-text.json
+/docs/captures/
+
+# Test, deployment and tool output
+/coverage/
+/playwright-report/
+/test-results/
+/.turbo/
+/.vercel/
+*.log
+
+# Editor backups and operating-system metadata
+/.idea/
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

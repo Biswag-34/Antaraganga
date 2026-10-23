@@ -1,0 +1,122 @@
+[
+  {
+    "id": "it",
+    "title": "Hospital IT systems",
+    "asset": "21-hospital-it-systems",
+    "cover": "covers/it-programme-cover.svg",
+    "source_document": "documents/it.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "mobility",
+    "title": "Disability support equipment",
+    "asset": "10-adult-rehabilitation",
+    "cover": "covers/mobility-programme-cover.svg",
+    "source_document": "documents/mobility.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "reception",
+    "title": "Reception & administration",
+    "asset": "20-reception-administration",
+    "cover": "covers/reception-programme-cover.svg",
+    "source_document": "documents/reception.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "ambulance",
+    "title": "Advanced ambulance",
+    "asset": "22-advanced-ambulance",
+    "cover": "covers/ambulance-programme-cover.svg",
+    "source_document": "documents/ambulance.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "emergency",
+    "title": "Emergency & casualty",
+    "asset": "25-emergency-casualty",
+    "cover": "covers/emergency-programme-cover.svg",
+    "source_document": "documents/emergency.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "dialysis",
+    "title": "3-bed dialysis unit",
+    "asset": "13-dialysis-unit",
+    "cover": "covers/dialysis-programme-cover.svg",
+    "source_document": "documents/dialysis.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "rehab",
+    "title": "Physiotherapy & rehabilitation",
+    "asset": "10-adult-rehabilitation",
+    "cover": "covers/rehab-programme-cover.svg",
+    "source_document": "documents/rehab.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "wound",
+    "title": "Wound & diabetic foot care",
+    "asset": "12-wound-foot-consultation",
+    "cover": "covers/wound-programme-cover.svg",
+    "source_document": "documents/wound.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "ct",
+    "title": "64-slice CT facility",
+    "asset": "16-ct-imaging",
+    "cover": "covers/ct-programme-cover.svg",
+    "source_document": "documents/ct.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "carm",
+    "title": "C-Arm imaging system",
+    "asset": "18-carm-imaging",
+    "cover": "covers/carm-programme-cover.svg",
+    "source_document": "documents/carm.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "xray",
+    "title": "Digital X-ray unit",
+    "asset": "17-digital-xray",
+    "cover": "covers/xray-programme-cover.svg",
+    "source_document": "documents/xray.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "lab",
+    "title": "Diagnostic laboratory",
+    "asset": "19-diagnostic-laboratory",
+    "cover": "covers/lab-programme-cover.svg",
+    "source_document": "documents/lab.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "ot",
+    "title": "Operation theatre",
+    "asset": "15-operation-theatre",
+    "cover": "covers/ot-programme-cover.svg",
+    "source_document": "documents/ot.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "icu",
+    "title": "Intensive care unit",
+    "asset": "14-intensive-care-unit",
+    "cover": "covers/icu-programme-cover.svg",
+    "source_document": "documents/icu.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  },
+  {
+    "id": "opd",
+    "title": "Outpatient department",
+    "asset": "02-mission-rural-family",
+    "cover": "covers/opd-programme-cover.svg",
+    "source_document": "documents/opd.docx",
+    "note": "Illustrative service photograph; source scope and budget are in the original proposal."
+  }
+]
