@@ -81,6 +81,7 @@ export default function ContactForm({
           selected={type}
           onChange={(i) => {
             setType(i);
+            setStep(0);
             setSaved(false);
           }}
         />
@@ -172,7 +173,7 @@ export default function ContactForm({
                 autoComplete="email"
                 name="email"
                 type="email"
-                placeholder="name@organisation.org"
+                placeholder={type === 0 ? 'you@example.com' : 'name@organisation.org'}
                 value={values.email}
                 onChange={(e) => update('email', e.target.value)}
                 required

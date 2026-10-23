@@ -1,11 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { Button, FAQ, Icon, Media, SectionTitle } from '@/components/primitives';
 import { CardProcess, HealthCard } from '@/components/interactive';
 import { enquiryUrl } from '@/content/programmes';
-export const metadata: Metadata = { title: 'Health-Card Initiative' };
+export const metadata = pageMetadata('/health-card');
 export default function HealthCardPage() {
   return (
     <>
+      <PageStructuredData path="/health-card" />
       <section className="health-card-hero">
         <Media id="23-health-card-registration" priority />
         <div className="container">

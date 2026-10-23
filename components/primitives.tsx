@@ -50,6 +50,9 @@ export function Media({
           fetchPriority={priority ? 'high' : 'auto'}
         />
       </picture>
+      {id === '01-hero-hospital' && (
+        <figcaption className="architectural-caption">Architectural visualisation</figcaption>
+      )}
     </figure>
   );
 }

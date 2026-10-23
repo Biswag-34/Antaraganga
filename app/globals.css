@@ -360,8 +360,6 @@ h2:focus {
 .brand img {
   width: 100%;
   height: auto;
-  border: 1px solid var(--control-border);
-  border-radius: 5px;
 }
 .desktop-nav {
   display: flex;
@@ -370,6 +368,9 @@ h2:focus {
 }
 .nav-group {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .nav-group > a {
   display: flex;
@@ -391,36 +392,96 @@ h2:focus {
   right: 0;
   border-radius: 4px;
 }
+.nav-disclosure {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 6px;
+  color: var(--slate);
+  transition:
+    color 220ms,
+    background 220ms;
+}
+.nav-disclosure:hover,
+.nav-group[data-open='true'] .nav-disclosure {
+  color: var(--teal-dark);
+  background: var(--ice);
+}
 .chevron {
-  font-size: 17px;
-  line-height: 1;
+  width: 16px;
+  height: 16px;
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-group[data-open='true'] .chevron {
+  transform: rotate(180deg);
 }
 .nav-dropdown {
   position: absolute;
   top: calc(100% - 8px);
   left: -18px;
-  min-width: 215px;
+  min-width: 240px;
   padding: 10px;
   background: #fff;
-  box-shadow: 0 10px 35px #12344a26;
+  box-shadow:
+    0 20px 50px -12px #12344a30,
+    0 4px 12px #12344a08;
   border: 1px solid #e5eef1;
-  border-radius: 7px;
-  display: none;
+  border-radius: 12px;
+  border-top: 2px solid var(--teal);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.98);
+  transform-origin: top left;
+  transition:
+    opacity 200ms ease,
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 320ms;
+}
+.nav-dropdown:before {
+  content: '';
+  position: absolute;
+  inset: -14px 0 100%;
 }
 .nav-dropdown a {
-  padding: 10px;
+  padding: 12px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  align-items: center;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition:
+    background 200ms,
+    color 200ms;
 }
-.nav-dropdown a:hover {
+.nav-dropdown a:hover,
+.nav-dropdown a:focus-visible {
   background: var(--ice);
+  color: var(--teal-dark);
 }
-.nav-group:hover .nav-dropdown,
-.nav-group:focus-within .nav-dropdown {
-  display: block;
+.nav-link-arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 200ms;
+}
+.nav-dropdown a:hover .nav-link-arrow,
+.nav-dropdown a:focus-visible .nav-link-arrow {
+  transform: translateX(3px);
+  opacity: 1;
+}
+.nav-group[data-open='true'] .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
 }
 .nav-partner {
   font-size: 14px;
@@ -432,6 +493,21 @@ h2:focus {
 }
 .mobile-nav {
   display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition:
+    opacity 220ms,
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 320ms;
+}
+.mobile-nav[data-open='true'] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
 }
 /* Hero compositions */
 .split-hero {
@@ -688,6 +764,7 @@ h2:focus {
   font-size: clamp(36px, 3.4vw, 52px);
 }
 .purpose-mosaic {
+  touch-action: pan-y pinch-zoom;
   display: flex;
   gap: 6px;
   height: 365px;
@@ -789,6 +866,7 @@ h2:focus {
   background: var(--ice);
 }
 .work-slide {
+  touch-action: pan-y pinch-zoom;
   position: relative;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -799,6 +877,20 @@ h2:focus {
 }
 .work-slide > .media {
   height: 100%;
+}
+.next-story {
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.next-story > .media {
+  height: 100%;
+}
+.purpose-mosaic .media,
+.work-slide > .media,
+.next-story {
+  user-select: none;
 }
 .work-slide-caption {
   position: absolute;
@@ -1436,6 +1528,92 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 .dual-cta a > span:last-child {
   margin-left: auto;
   font-size: 27px;
+}
+.public-contact,
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 36px;
+  font-style: normal;
+  overflow-wrap: anywhere;
+}
+.public-contact {
+  padding-block: 30px;
+}
+.public-contact > div {
+  flex: 1 1 220px;
+}
+.public-contact strong,
+.public-contact span,
+.public-contact a {
+  display: block;
+}
+.public-contact strong {
+  margin-bottom: 6px;
+}
+.public-contact a {
+  color: var(--teal-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.public-contact p {
+  flex-basis: 100%;
+  font-size: 14px;
+}
+.footer-contact {
+  padding-block: 20px;
+  border-top: 1px solid var(--line);
+  color: #dcebf1;
+  font-size: 13px;
+}
+.footer-contact a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.architectural-caption {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  max-width: calc(100% - 36px);
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #092d43e8;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.care-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
+}
+.care-overview-grid article {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.care-overview-grid h3 {
+  margin-bottom: 10px;
+}
+.care-overview-grid .care-status {
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 650;
+  margin-bottom: 10px;
+}
+.care-overview-grid a {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--teal-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.programme-hero .proposal-status {
+  color: #a7e8eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
 }
 /* Service explorer and care journey */
 .service-explorer {
@@ -2760,8 +2938,8 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   position: absolute;
   border: 4px solid #fff;
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   background: var(--teal);
   color: #fff;
   font-size: 18px;
@@ -2785,8 +2963,9 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 }
 .hotspot-label {
   position: absolute;
-  left: 36%;
-  top: 30%;
+  pointer-events: none;
+  left: 14px;
+  bottom: 14px;
   width: 285px;
   max-width: 45%;
   padding: 18px 22px;
@@ -5162,12 +5341,16 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     background: linear-gradient(transparent, #062b41ef);
   }
   .work-explorer > .selector {
-    padding: 0 8px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    padding: 0 var(--gutter);
     min-height: 58px;
   }
   .work-explorer > .selector > button {
-    white-space: nowrap;
-    padding-inline: 7px;
+    min-height: 48px;
+    white-space: normal;
+    padding: 12px 7px;
   }
   .work-explorer > .selector > button + button:before {
     display: none;
@@ -5794,13 +5977,17 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     padding-top: 6px;
   }
   .funding-explorer .selector > button {
-    padding: 10px 3px;
-    white-space: nowrap;
+    min-height: 48px;
+    padding: 12px 7px;
+    white-space: normal;
   }
   .funding-explorer .selector > button + button:before {
     display: none;
   }
   .funding-explorer .selector {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
     margin: 0 0 15px;
   }
   .funding-feature {
@@ -6106,16 +6293,16 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     border-radius: 8px;
   }
   .hotspot {
-    width: 33px;
-    height: 33px;
+    width: 44px;
+    height: 44px;
     border-width: 3px;
     font-size: 13px;
   }
   .hotspot-label {
-    left: 22%;
-    top: 46%;
-    width: 220px;
-    max-width: 65%;
+    left: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+    max-width: none;
     padding: 12px 14px;
   }
   .hotspot-label strong {
@@ -6611,7 +6798,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     padding-inline: 5px;
   }
   .hotspot-label {
-    max-width: 68%;
     padding: 10px;
   }
   .scope-legend > button {
@@ -6973,11 +7159,11 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   font-weight: 550;
   line-height: 1.5;
 }
-/* Compact reference footer */
+/* Shared footer: a curved edge and navy surface close every page. */
 .footer-main {
   grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(95px, 1fr)) minmax(160px, 1.45fr);
   gap: 22px;
-  padding-block: 30px 26px;
+  padding-block: 38px 34px;
 }
 .footer-main > div + div {
   padding-left: 20px;
@@ -6985,8 +7171,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 .footer-brand img {
   width: min(100%, 285px);
   height: auto;
-  border: 1px solid var(--control-border);
-  border-radius: 5px;
 }
 .footer-brand .footer-logo-on-navy {
   display: none;
@@ -7019,34 +7203,42 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 .footer-bottom a {
   font-size: 12px;
 }
-body:has(.contact-hero) .site-footer {
+.site-footer {
   --control-border: #ffffff30;
+  --line: #ffffff26;
   position: relative;
-  background: linear-gradient(110deg, #12344a, #16465d);
+  background: linear-gradient(180deg, #12344a, #10364b);
   border-top: 0;
   color: #fff;
-  margin-top: 28px;
+  margin-top: 48px;
 }
-body:has(.contact-hero) .site-footer:before {
+.site-footer:before {
   content: '';
   position: absolute;
-  inset: -27px 0 auto;
-  height: 28px;
+  inset: -47px 0 auto;
+  height: 48px;
   background: url('/media/support/dividers/03-care-top-desktop.svg') center / 100% 100%;
 }
-body:has(.contact-hero) .footer-main p,
-body:has(.contact-hero) .footer-main > div > a:not(:first-child) {
+.site-footer .footer-main p,
+.site-footer .footer-main > div > a:not(:first-child) {
   color: #dcebf1;
 }
-body:has(.contact-hero) .footer-main > div + div,
-body:has(.contact-hero) .footer-motto {
+.site-footer .footer-main > div + div,
+.site-footer .footer-motto {
   border-color: #ffffff35;
 }
-body:has(.contact-hero) .footer-logo {
+.site-footer .footer-logo {
   display: none;
 }
-body:has(.contact-hero) .footer-brand .footer-logo-on-navy {
+.site-footer .footer-brand .footer-logo-on-navy {
   display: block;
+}
+.site-footer a:hover {
+  color: #9be2e6;
+}
+.site-footer .footer-bottom {
+  border-top: 1px solid var(--line);
+  background: #0c2b3e;
 }
 @media (min-width: 768px) and (max-width: 1100px) {
   .main-nav {

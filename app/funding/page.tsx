@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { Button, Icon, Media } from '@/components/primitives';
 import {
   DocumentExplorer,
@@ -8,10 +9,11 @@ import {
 } from '@/components/interactive';
 import { LandscapeCTA } from '@/components/sections';
 import { enquiryUrl } from '@/content/programmes';
-export const metadata: Metadata = { title: 'CSR & Institutional Partnerships' };
+export const metadata = pageMetadata('/funding');
 export default function Funding() {
   return (
     <>
+      <PageStructuredData path="/funding" />
       <section className="funding-hero navy">
         <Media id="09-hospital-purpose" priority />
         <div>

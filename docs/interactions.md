@@ -3,9 +3,9 @@
 | Area | Trigger and result | Keyboard / mobile |
 | --- | --- | --- |
 | Header | Navigation links resolve to real routes; hover/focus opens desktop subnavigation | Native links; current route indicated; mobile toggle announces expanded state; Escape closes and returns focus; menu cycles focus |
-| Commitment | Choose rural/disability/community to expand the matching purpose image and caption | Native buttons; pressed state; mobile arrows/dots and swipe |
+| Commitment | Choose rural/disability/community to expand the matching purpose image and caption | Native buttons; pressed state; arrows/dots and horizontal pointer swipes; vertical scrolling remains native |
 | Shared selectors | Choose category to update content | Left/right/Home/End move and select; visible focus; mobile stacked or horizontal layouts |
-| Work | Programme filters and previous/next controls update still image, heading, steps and enquiry context | Buttons and swipe; never a fake video player |
+| Work | Programme filters, previous/next controls, horizontal swipes and the homepage adjacent-photo button update the image and matching enquiry context | Swipes require 50px of horizontal movement; arrows/swipes reset the feature filter to All programmes; phone filters use two columns with 48px targets |
 | Hospital mission | Select commitment to update photo and supporting line | Pressed state; mobile vertical selectors |
 | Approach | Select treat/rehabilitate/prevent/support to update the preview | Buttons; mobile vertical navigation with care page link |
 | Services | Category selects the first matching service; service list changes photo, description, features and enquiry target | Native buttons; mobile scrollable service chooser beneath content |
@@ -18,10 +18,10 @@
 | Proposal discovery | Header utility link and mobile menu lead directly to the proposal directory; homepage features three programme cards and a link to all proposals | Native links, visible at mobile and desktop widths |
 | Proposal directory | All 15 programmes appear initially; category filters show matching proposals; original DOCX downloads stay available in each row | Native selector buttons with arrow/Home/End support; native download anchors |
 | Documents | Change proposals/institutional/reporting view | Selector; missing documents offer enquiry instead of fake downloads |
-| Programme scope | Select numbered hotspot or corresponding legend | Button announces the scope and pressed state; HTML explanation; mobile stacked legend |
+| Programme scope | Select numbered hotspot or corresponding legend | Synchronized pressed states and caption; 44px image targets; caption sits below targets and does not intercept taps; mobile stacked legend |
 | Accountability | Switch proposed record/reporting category | Selector; enquiry for real records, no invented sample evidence |
 | Enquiry context | Programme CTA opens `/contact?type=partnership&interest=...` | Query values seed and remount the client form; any interest has a visible option |
-| Enquiry form | Required fields, email and minimum message validation → review → edit or save text draft | Labels/autocomplete/native validity; heading focus on step changes; no transmission or fake sent state |
+| Enquiry form | Required fields, email and minimum message validation → review → edit or save text draft; changing enquiry type returns to details for validation | Labels/autocomplete/native validity; heading focus on review/edit; no transmission or fake sent state |
 
 No personal data is stored in local storage. Form values exist in page memory, and an explicit download saves a draft to the visitor's device. Public delivery requires a chosen endpoint/provider, server validation, abuse prevention, approved privacy text and a real success/error response.
 

@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { programmes, getProgramme, money, enquiryUrl } from '@/content/programmes';
 import { Button, Icon, Media, SectionTitle } from '@/components/primitives';
 import { Accountability, ProgrammeScope } from '@/components/interactive';
@@ -13,7 +16,8 @@ export async function generateMetadata({
   params: Promise<{ programme: string }>;
 }): Promise<Metadata> {
   const p = getProgramme((await params).programme);
-  return { title: p?.title ?? 'Programme not found' };
+  if (!p) notFound();
+  return pageMetadata(`/funding/${p.id}`);
 }
 export default async function ProgrammePage({
   params,
@@ -24,20 +28,21 @@ export default async function ProgrammePage({
   if (!p) notFound();
   return (
     <>
+      <PageStructuredData path={`/funding/${p.id}`} />
       <section className="programme-hero navy">
         <Media id={p.id === 'dialysis' ? '02-mission-rural-family' : p.asset} priority />
         <div className="container">
           <nav aria-label="Breadcrumb">
-            <a href="/funding">CSR Partnerships</a>
-            <span>/</span>
-            <span>{p.category}</span>
+            <Link href="/">Home</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/funding">Funding proposals</Link>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">{p.title}</span>
           </nav>
-
+          <p className="proposal-status">Proposed funding project</p>
           <h1>{p.heading}</h1>
           <p>
-            {p.id === 'dialysis'
-              ? 'Support a local three-station dialysis service.'
-              : `Support the proposed ${p.title.toLowerCase()} programme.`}
+            {`Support the proposed ${p.title.toLowerCase()} programme. Scope and costs are planning estimates; commissioning and service availability require hospital confirmation.`}
           </p>
           <div className="actions">
             <Button tone="white" href={enquiryUrl(p.title)}>

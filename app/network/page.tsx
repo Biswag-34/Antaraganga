@@ -1,11 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { SplitHero } from '@/components/primitives';
 import { CampusExplorer, ReachExplorer } from '@/components/interactive';
 import { ConversationLinks } from '@/components/sections';
-export const metadata: Metadata = { title: 'Locations & Outreach' };
+export const metadata = pageMetadata('/network');
 export default function Network() {
   return (
     <>
+      <PageStructuredData path="/network" />
       <SplitHero
         className="network-hero"
 

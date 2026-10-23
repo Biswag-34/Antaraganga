@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { hospital } from '@/content/hospital';
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -52,6 +53,11 @@ export default function Footer() {
           </span>
         </p>
       </div>
+      <address className="container footer-contact">
+        <span>{hospital.address}</span>
+        <a href={hospital.phoneHref}>{hospital.phone}</a>
+        <a href={`mailto:${hospital.email}`}>{hospital.email}</a>
+      </address>
       <div className="footer-bottom">
         <div className="container">
           <small>

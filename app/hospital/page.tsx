@@ -1,11 +1,13 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { Button, Icon, Media } from '@/components/primitives';
 import { ApproachExplorer, MissionExplorer } from '@/components/interactive';
 import { DualCTA, Leadership } from '@/components/sections';
-export const metadata: Metadata = { title: 'Our Hospital' };
+export const metadata = pageMetadata('/hospital');
 export default function Hospital() {
   return (
     <>
+      <PageStructuredData path="/hospital" />
       <section className="photo-hero hospital-hero">
         <Media id="09-hospital-purpose" priority />
         <div className="container">

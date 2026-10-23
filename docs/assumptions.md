@@ -1,5 +1,7 @@
 # Assumptions and missing inputs
 
+SEO release update, 23 October 2026: the owner selected `https://www.antharagangaruralhospital.com`, approved production indexing and supplied the public regional address, phone and email now maintained in `content/hospital.ts`. These replace the original missing-contact assumptions below. Service availability, hours, precise directions, leadership, health-card rollout and final policies remain unconfirmed. See `seo-implementation.md` for the current release configuration and remaining actions.
+
 Build date: 23 October 2026. Scope: the complete site requested by the user. The manual's example “Phase 1 only” prompt was not treated as the current request.
 
 - The workspace initially contained only handoff assets. The Next.js project is at the workspace root so `npm run dev` is the main entry point.

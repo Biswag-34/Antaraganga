@@ -1,8 +1,10 @@
-import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Privacy' };
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
+export const metadata = pageMetadata('/privacy');
 export default function Privacy() {
   return (
     <article className="container legal-page">
+      <PageStructuredData path="/privacy" />
       <h1>Privacy</h1>
       <p>
         This website is a local design preview for Antharagange Rural Hospital. The enquiry form

@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start --hostname 0.0.0.0 --port 3000",
     "typecheck": "tsc --noEmit",
-    "check:routes": "node scripts/check-routes.mjs"
+    "check:routes": "node scripts/check-routes.mjs",
+    "test:seo": "node tests/seo-config.test.mjs",
+    "test:gestures": "node tests/gestures.test.mjs",
+    "check:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "next": "latest",

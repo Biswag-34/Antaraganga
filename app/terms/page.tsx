@@ -1,8 +1,10 @@
-import type { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Website Information' };
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
+export const metadata = pageMetadata('/terms');
 export default function Terms() {
   return (
     <article className="container legal-page">
+      <PageStructuredData path="/terms" />
       <h1>Website information</h1>
       <p>
         This is a design and functionality preview. Hospital information, service availability,

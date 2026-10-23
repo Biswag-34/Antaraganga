@@ -1,12 +1,14 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { Button, FAQ, Icon, Media, SectionTitle } from '@/components/primitives';
 import { WorkCarousel } from '@/components/interactive';
 import { LandscapeCTA } from '@/components/sections';
 import { enquiryUrl } from '@/content/programmes';
-export const metadata: Metadata = { title: 'Our Work' };
+export const metadata = pageMetadata('/work');
 export default function Work() {
   return (
     <>
+      <PageStructuredData path="/work" />
       <section className="work-hero">
         <div className="work-hero-mosaic">
           <Media id="04-programme-eye-care" priority />

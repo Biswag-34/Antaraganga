@@ -1,7 +1,9 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
+import { PageStructuredData } from '@/components/seo';
 import { Button, FAQ, Icon, Media, SectionTitle, SplitHero } from '@/components/primitives';
 import ContactForm from '@/components/contact-form';
-export const metadata: Metadata = { title: 'Contact & Collaborate' };
+import { hospital } from '@/content/hospital';
+export const metadata = pageMetadata('/contact');
 export default async function Contact({
   searchParams,
 }: {
@@ -10,6 +12,7 @@ export default async function Contact({
   const query = await searchParams;
   return (
     <>
+      <PageStructuredData path="/contact" />
       <SplitHero
         className="contact-hero"
 
@@ -24,6 +27,24 @@ export default async function Contact({
         image="07-care-journey-cutout"
       />
       <section className="contact-body ice">
+        <address className="container public-contact">
+          <div>
+            <strong>Address</strong>
+            <span>{hospital.address}</span>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <a href={hospital.phoneHref}>{hospital.phone}</a>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <a href={`mailto:${hospital.email}`}>{hospital.email}</a>
+          </div>
+          <p>
+            Contact us directly by phone or email. Confirm service availability and visiting hours
+            before travelling. The form below prepares a draft; it does not send an online enquiry.
+          </p>
+        </address>
         <div className="container contact-grid">
           <ContactForm
             key={(query.type || 'partnership') + (query.interest || '')}
@@ -95,9 +116,7 @@ export default async function Contact({
                 <div>
                   <h3>For hospital and care enquiries</h3>
                   <p>Get in touch with our Kolar team.</p>
-                  <Button href="/contact?type=hospital&interest=Hospital%20visit">
-                    Prepare a hospital enquiry
-                  </Button>
+                  <Button href={hospital.phoneHref}>Call the hospital team</Button>
                 </div>
               </article>
               <article>
@@ -109,8 +128,8 @@ export default async function Contact({
                 </div>
               </article>
               <p className="small-print">
-                Verified direct contact and branch details will be added following hospital
-                confirmation.
+                Call or email the team to confirm visiting hours, exact directions and current
+                service availability before travelling.
               </p>
             </div>
           </div>
@@ -123,12 +142,12 @@ export default async function Contact({
             {
               question: 'Can I enquire about a programme?',
               answer:
-                'Select a programme in your enquiry so the team can guide the discussion. This preview lets you review and save a draft; online delivery is not yet connected.',
+                'Call or email the hospital team and mention the programme you are interested in. The form can prepare a draft, but online delivery is not yet connected.',
             },
             {
               question: 'How do I ask about visiting the hospital?',
               answer:
-                'Choose Hospital enquiry and Hospital visit. Confirm the exact address, hours and service availability with the hospital before planning a visit.',
+                'Call or email the hospital team to confirm exact directions, hours and service availability before planning a visit.',
             },
           ]}
         />

@@ -1,9 +1,10 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button, Icon, Media, SectionTitle } from './primitives';
 import { careSteps, commitments, services, workStories } from '@/content/site';
 import { enquiryUrl, programmes } from '@/content/programmes';
+import { useSwipe } from './use-swipe';
 
 export function Selector({
   labels,
@@ -90,6 +91,9 @@ export function CarouselControls({
 }
 export function PurposeHome() {
   const [selected, setSelected] = useState(1);
+  const swipe = useSwipe((direction) =>
+    setSelected((current) => (current + direction + commitments.length) % commitments.length)
+  );
   return (
     <section className="purpose-home ice">
       <div className="container">
@@ -120,20 +124,11 @@ export function PurposeHome() {
           </h2>
         </div>
       </div>
-      <div
-        className="purpose-mosaic"
-        onTouchStart={(e) => {
-          e.currentTarget.dataset.touch = String(e.touches[0].clientX);
-        }}
-        onTouchEnd={(e) => {
-          const start = Number(e.currentTarget.dataset.touch);
-          const delta = e.changedTouches[0].clientX - start;
-          if (Math.abs(delta) > 50) setSelected((selected + (delta < 0 ? 1 : 2)) % 3);
-        }}
-      >
+      <div className="purpose-mosaic" {...swipe}>
         {commitments.map((c, i) => (
           <button
             key={c.title}
+            data-swipe-item
             aria-pressed={selected === i}
             onClick={() => setSelected(i)}
             className={`mosaic-panel ${selected === i ? 'active' : ''}`}
@@ -176,13 +171,20 @@ export function WorkCarousel({ feature = false }: { feature?: boolean }) {
   const [selected, setSelected] = useState(0);
   const [filter, setFilter] = useState(0);
   const story = workStories[selected];
-  const start = useRef(0);
+  const showStory = (index: number) => {
+    setSelected(index);
+    setFilter(0);
+  };
+  const swipe = useSwipe((direction) => {
+    setSelected((current) => (current + direction + workStories.length) % workStories.length);
+    setFilter(0);
+  });
   return (
     <div className={feature ? 'work-explorer' : 'home-work container section-pad'}>
       {!feature && (
         <div className="title-row">
           <SectionTitle>Care that reaches the community.</SectionTitle>
-          <CarouselControls index={selected} total={3} onChange={setSelected} />
+          <CarouselControls index={selected} total={3} onChange={showStory} />
         </div>
       )}
       {feature && (
@@ -195,16 +197,7 @@ export function WorkCarousel({ feature = false }: { feature?: boolean }) {
           }}
         />
       )}
-      <div
-        className={`work-slide ${feature ? 'work-slide--feature' : ''}`}
-        onTouchStart={(e) => {
-          start.current = e.touches[0].clientX;
-        }}
-        onTouchEnd={(e) => {
-          const delta = e.changedTouches[0].clientX - start.current;
-          if (Math.abs(delta) > 50) setSelected((selected + (delta < 0 ? 1 : 2)) % 3);
-        }}
-      >
+      <div className={`work-slide ${feature ? 'work-slide--feature' : ''}`} {...swipe}>
         <Media id={story.image} />
         {feature ? (
           <div className="work-story navy" aria-live="polite">
@@ -223,14 +216,7 @@ export function WorkCarousel({ feature = false }: { feature?: boolean }) {
             <Button tone="text" href={enquiryUrl(story.enquiry, 'outreach')}>
               Explore the programme
             </Button>
-            <CarouselControls
-              index={selected}
-              total={3}
-              onChange={(i) => {
-                setSelected(i);
-                setFilter(0);
-              }}
-            />
+            <CarouselControls index={selected} total={3} onChange={showStory} />
           </div>
         ) : (
           <>
@@ -241,7 +227,14 @@ export function WorkCarousel({ feature = false }: { feature?: boolean }) {
                 →
               </Link>
             </div>
-            <Media className="next-story" id={workStories[(selected + 1) % 3].image} />
+            <button
+              className="next-story"
+              data-swipe-item
+              aria-label={`Show next story: ${workStories[(selected + 1) % workStories.length].title}`}
+              onClick={() => showStory((selected + 1) % workStories.length)}
+            >
+              <Media id={workStories[(selected + 1) % workStories.length].image} />
+            </button>
           </>
         )}
       </div>
