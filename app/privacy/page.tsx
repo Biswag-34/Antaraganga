@@ -7,15 +7,15 @@ export default function Privacy() {
       <PageStructuredData path="/privacy" />
       <h1>Privacy</h1>
       <p>
-        This website is a local design preview for Antharagange Rural Hospital. The enquiry form
-        lets you review information and download a draft to your own device. It does not send that
-        information to the hospital or save it in a database.
+        The general enquiry form lets you review information and download a draft to your own
+        device.
       </p>
       <h2>Your information</h2>
       <p>
-        Do not include medical records or sensitive health information. Form fields remain in the
-        current page’s memory while you review your draft. This preview does not use analytics or
-        marketing cookies.
+        The donation callback form collects your name, phone number and selected programme so the
+        hospital team can follow up about your contribution. Local preview requests are stored on
+        the preview server. Use sample details when testing. Please keep medical records and health
+        information out of both forms.
       </p>
       <h2>Before public launch</h2>
       <p>

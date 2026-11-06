@@ -5,6 +5,7 @@ import { Button, Icon, Media, SectionTitle } from './primitives';
 import { careSteps, commitments, services, workStories } from '@/content/site';
 import { enquiryUrl, programmes } from '@/content/programmes';
 import { useSwipe } from './use-swipe';
+import { FundingCard } from './funding-card';
 
 export function Selector({
   labels,
@@ -213,7 +214,7 @@ export function WorkCarousel({ feature = false }: { feature?: boolean }) {
                 </div>
               ))}
             </div>
-            <Button tone="text" href={enquiryUrl(story.enquiry, 'outreach')}>
+            <Button tone="text" href={`/work/${story.id}`}>
               Explore the programme
             </Button>
             <CarouselControls index={selected} total={3} onChange={showStory} />
@@ -223,7 +224,11 @@ export function WorkCarousel({ feature = false }: { feature?: boolean }) {
             <div className="work-slide-caption" aria-live="polite">
               <strong>{story.title}</strong>
               <p>{story.description}</p>
-              <Link href="/work" className="round-arrow" aria-label={`Explore ${story.title}`}>
+              <Link
+                href={`/work/${story.id}`}
+                className="round-arrow"
+                aria-label={`Explore ${story.title}`}
+              >
                 →
               </Link>
             </div>
@@ -501,15 +506,16 @@ export function ProposalDirectory() {
     'Rehabilitation',
     'Hospital systems',
   ];
-  const visible =
-    category === 0 ? programmes : programmes.filter((p) => p.category === categories[category]);
+  const visible = programmes
+    .filter((p) => category === 0 || p.category === categories[category])
+    .sort((a, b) => Number(Boolean(b.urgent)) - Number(Boolean(a.urgent)));
   return (
     <section className="container proposal-directory section-pad" id="proposals">
       <div className="proposal-directory-heading">
-        <SectionTitle description="Explore every programme, review its scope and download the original funding proposal.">
+        <SectionTitle description="Choose a programme and contribute any amount you’re comfortable giving.">
           Find a programme to support.
         </SectionTitle>
-        <span className="proposal-total">15 funding proposals</span>
+        <span className="proposal-total">{programmes.length} funding proposals</span>
       </div>
       <Selector
         labels={categories}
@@ -518,45 +524,11 @@ export function ProposalDirectory() {
         className="proposal-filters"
       />
       <p className="proposal-results" role="status">
-        Showing {visible.length} of 15 proposals
+        Showing {visible.length} of {programmes.length} proposals
       </p>
-      <div className="proposal-rows">
+      <div className="fund-card-grid">
         {visible.map((p) => (
-          <article key={p.id}>
-            <Link
-              className="proposal-thumb"
-              href={`/funding/${p.id}`}
-              tabIndex={-1}
-              aria-hidden="true"
-            >
-              <Media id={p.asset} />
-            </Link>
-            <div>
-              <Link className="proposal-title" href={`/funding/${p.id}`}>
-                {p.title}
-              </Link>
-              <span className="proposal-category">{p.category}</span>
-              <p>{p.scope[0]}.</p>
-            </div>
-            <a
-              className="proposal-download"
-              href={`/media/support/${p.source_document}`}
-              download
-              aria-label={`Download ${p.title} proposal DOCX`}
-            >
-              <Icon name="file-text" />
-              <span>
-                Download proposal <small>(DOCX)</small>
-              </span>
-            </a>
-            <Link
-              className="round-arrow"
-              href={`/funding/${p.id}`}
-              aria-label={`Read ${p.title} programme`}
-            >
-              ›
-            </Link>
-          </article>
+          <FundingCard key={p.id} programme={p} showDownload />
         ))}
       </div>
       <div className="directory-foot">

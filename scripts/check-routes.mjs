@@ -11,8 +11,12 @@ const manifest = JSON.parse(
 const routes = [
   '/',
   '/hospital',
+  '/team',
   '/care',
   '/work',
+  '/work/meenakshi-eye-care',
+  '/work/rural-health-camps',
+  '/work/prachi-first-aid',
   '/network',
   '/health-card',
   '/funding',
@@ -37,7 +41,8 @@ for (const route of routes) {
     failures.push(error.message);
   }
 }
-for (const route of ['/funding/not-a-programme', '/not-a-page']) {
+const missingRoutes = ['/funding/not-a-programme', '/work/not-a-programme', '/not-a-page'];
+for (const route of missingRoutes) {
   try {
     const res = await fetch(`${base}${route}`);
     assert.equal(res.status, 404, `${route}: should return 404`);
@@ -103,5 +108,5 @@ if (failures.length) {
   process.exitCode = 1;
 } else
   console.log(
-    `Verified ${routes.length} routes, 2 missing routes, 15 DOCX downloads and ${assetPaths.size} media assets.`
+    `Verified ${routes.length} routes, ${missingRoutes.length} missing routes, ${mapping.length} DOCX downloads and ${assetPaths.size} media assets.`
   );

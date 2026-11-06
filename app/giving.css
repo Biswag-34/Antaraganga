@@ -1,0 +1,349 @@
+.fund-eyebrow {
+  color: var(--teal-dark);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.donation-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 5vw, 72px);
+  margin-bottom: clamp(42px, 6vw, 84px);
+  padding: clamp(24px, 4vw, 54px);
+  background: linear-gradient(120deg, #e4f4f2, #f7fbfa 72%);
+  border: 1px solid #d0e8e5;
+  border-radius: 24px;
+}
+
+.donation-intro-main,
+.donation-intro-guide {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+}
+
+.donation-intro-main p:last-child {
+  max-width: 52ch;
+}
+
+.donation-intro-guide {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.fund-card-grid,
+.community-detail-steps,
+.doctor-directory {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.fund-card,
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 8px 26px #12344a0d;
+}
+
+.fund-card:hover,
+.fund-card:focus-within {
+  border-color: var(--teal);
+}
+
+.fund-card--urgent {
+  border-color: #e9b5a8;
+}
+
+.fund-card-image {
+  position: relative;
+}
+
+.fund-card-image .media {
+  height: clamp(150px, 17vw, 224px);
+}
+
+.urgent-funding-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid #e9b5a8;
+  border-radius: 100px;
+  background: #fff0ea;
+  color: #8a3827;
+  font-size: 0.8rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.urgent-funding-badge > span {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.fund-card-image .urgent-funding-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.programme-hero .proposal-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.fund-card-body,
+.doctor-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(18px, 2vw, 28px);
+}
+
+.fund-card-body h3,
+.doctor-card-body h3 {
+  font-family: var(--serif);
+  font-size: clamp(23px, 2.2vw, 30px);
+}
+
+.fund-card-body > p {
+  margin-bottom: auto;
+}
+
+.fund-card-budget {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #eef7f7;
+}
+
+.fund-card-budget .icon {
+  color: var(--teal-dark);
+}
+
+.fund-card-budget span,
+.fund-card-budget strong {
+  display: block;
+}
+
+.fund-card-budget span {
+  color: var(--slate);
+  font-size: 0.8rem;
+}
+
+.fund-card-budget strong {
+  font-size: 1.16rem;
+}
+
+.fund-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.fund-card-actions > .button {
+  flex: 1 0 auto;
+  justify-content: center;
+  padding-inline: 12px;
+}
+
+.fund-card-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  align-self: flex-start;
+  color: var(--teal-dark);
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.fund-card-download .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+body:has(.donation-dialog[open]) {
+  overflow: hidden;
+}
+
+.donation-dialog {
+  width: min(100% - 32px, 490px);
+  max-height: calc(100dvh - 32px);
+  padding: clamp(22px, 5vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--navy);
+  box-shadow: 0 24px 80px #092d4340;
+}
+
+.donation-dialog::backdrop {
+  background: #092d43b8;
+}
+
+.donation-dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ice);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.donation-dialog h2 {
+  margin: 6px 28px 12px 0;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.donation-dialog p {
+  color: var(--slate);
+}
+
+.donation-dialog .fund-eyebrow {
+  color: var(--teal-dark);
+}
+
+.donation-form {
+  display: grid;
+  gap: 13px;
+  margin-top: 20px;
+}
+
+.donation-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 650;
+}
+
+.donation-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  color: var(--navy);
+  font-weight: 400;
+  background: #fff;
+  border: 1px solid #b7cdd4;
+  border-radius: 8px;
+}
+
+.donation-form .donation-note,
+.donation-form [role='alert'] {
+  font-size: 0.88rem;
+}
+
+.donation-form [role='alert'] {
+  color: #8a3827;
+}
+
+.donation-form [role='alert'] a {
+  text-decoration: underline;
+}
+
+.donation-form > .button {
+  justify-content: center;
+}
+
+.donation-confirmation > .icon-circle {
+  background: var(--ice);
+}
+
+.donation-confirmation > .icon-circle .icon {
+  filter: none;
+}
+
+.donation-confirmation .button {
+  margin-top: 20px;
+}
+
+.community-detail-steps {
+  padding: 0;
+  list-style: none;
+}
+
+.community-detail-steps li {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #f6fbfc;
+}
+
+.community-detail-steps li > span {
+  color: var(--teal-dark);
+  font-weight: 750;
+}
+
+.doctor-portrait {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 2;
+  background: linear-gradient(135deg, #e3f2f3, #cbe7e6);
+}
+
+.doctor-portrait .icon-circle {
+  width: 76px;
+  height: 76px;
+  background: #fff;
+}
+
+.doctor-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .fund-card-grid,
+  .doctor-directory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .donation-intro,
+  .fund-card-grid,
+  .community-detail-steps,
+  .doctor-directory {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fund-card-image .media {
+    height: 190px;
+  }
+}

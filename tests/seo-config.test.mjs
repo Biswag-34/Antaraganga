@@ -105,14 +105,14 @@ test('original documents need their own explicit indexing decision', () => {
   );
 });
 
-test('all 25 current pages have distinct titles and descriptions, with no invented routes', async () => {
+test('all 29 current pages have distinct paths, titles and descriptions', async () => {
   const pages = JSON.parse(await readFile(new URL('../content/seo-pages.json', import.meta.url)));
   const programmes = JSON.parse(
     await readFile(new URL('../content/programme-map.json', import.meta.url))
   );
-  assert.equal(pages.length, 25);
+  assert.equal(pages.length, 29);
   for (const field of ['path', 'title', 'description'])
-    assert.equal(new Set(pages.map((p) => p[field])).size, 25);
+    assert.equal(new Set(pages.map((p) => p[field])).size, pages.length);
   for (const programme of programmes) {
     const entry = pages.find((p) => p.path === `/funding/${programme.id}`);
     assert(entry && /proposal/i.test(entry.title));

@@ -12,6 +12,12 @@
     "label": "Our hospital"
   },
   {
+    "path": "/team",
+    "title": "Campus Doctors | Antharagange Rural Hospital",
+    "description": "Find out about the doctor directory at Antharagange Rural Hospital in Kolar and ask the hospital about current doctor availability.",
+    "label": "Campus doctors"
+  },
+  {
     "path": "/care",
     "title": "Care and Rehabilitation | Antharagange Rural Hospital",
     "description": "Explore rural healthcare and rehabilitation at Antharagange Rural Hospital in Kolar. Contact the team to confirm which services are currently available.",
@@ -22,6 +28,24 @@
     "title": "Community Health Programmes | Antharagange Rural Hospital",
     "description": "Explore eye-care support, rural health camps and PraChi first-aid training in Kolar. Ask the team about programme details and outreach collaboration.",
     "label": "Community programmes"
+  },
+  {
+    "path": "/work/meenakshi-eye-care",
+    "title": "Meenakshi Eye Care | Antharagange Rural Hospital",
+    "description": "Learn how the Meenakshi programme connects rural communities with eye screening, referrals and follow-up.",
+    "label": "Meenakshi eye care"
+  },
+  {
+    "path": "/work/rural-health-camps",
+    "title": "Rural Health Camps | Antharagange Rural Hospital",
+    "description": "Explore community health screening, referrals and follow-up through rural health camps in Kolar.",
+    "label": "Rural health camps"
+  },
+  {
+    "path": "/work/prachi-first-aid",
+    "title": "PraChi First Aid | Antharagange Rural Hospital",
+    "description": "Explore the PraChi programme and ask about practical first-aid training for your community.",
+    "label": "PraChi first aid"
   },
   {
     "path": "/network",

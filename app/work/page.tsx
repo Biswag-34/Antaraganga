@@ -11,8 +11,8 @@ export default function Work() {
       <PageStructuredData path="/work" />
       <section className="work-hero">
         <div className="work-hero-mosaic">
-          <Media id="04-programme-eye-care" priority />
-          <Media id="05-programme-rural-health-camp" />
+          <Media id="04-programme-eye-care" />
+          <Media id="05-programme-rural-health-camp" priority />
           <Media id="06-programme-prachi-first-aid" />
         </div>
         <div className="container">

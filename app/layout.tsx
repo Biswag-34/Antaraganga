@@ -5,6 +5,7 @@ import Footer from '@/components/site/footer';
 import { SiteStructuredData } from '@/components/seo';
 import { seoConfig } from '@/lib/seo';
 import './globals.css';
+import './giving.css';
 const sans = localFont({
   src: '../public/media/support/fonts/DM-Sans-Variable.ttf',
   variable: '--font-sans',

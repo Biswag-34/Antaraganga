@@ -6,6 +6,8 @@ import { PageStructuredData } from '@/components/seo';
 import { programmes, getProgramme, money, enquiryUrl } from '@/content/programmes';
 import { Button, Icon, Media, SectionTitle } from '@/components/primitives';
 import { Accountability, ProgrammeScope } from '@/components/interactive';
+import { DonateButton } from '@/components/donate-button';
+import { UrgentFundingBadge } from '@/components/funding-card';
 export const dynamicParams = false;
 export function generateStaticParams() {
   return programmes.map((p) => ({ programme: p.id }));
@@ -39,13 +41,17 @@ export default async function ProgrammePage({
             <span aria-hidden="true">/</span>
             <span aria-current="page">{p.title}</span>
           </nav>
-          <p className="proposal-status">Proposed funding project</p>
+          <p className="proposal-status">
+            <span>Proposed funding project</span>
+            {p.urgent && <UrgentFundingBadge />}
+          </p>
           <h1>{p.heading}</h1>
           <p>
-            {`Support the proposed ${p.title.toLowerCase()} programme. Scope and costs are planning estimates; commissioning and service availability require hospital confirmation.`}
+            {`Support the proposed ${p.title.toLowerCase()} programme with any amount you choose. The scope and costs are planning estimates. Contact the hospital to confirm service availability.`}
           </p>
           <div className="actions">
-            <Button tone="white" href={enquiryUrl(p.title)}>
+            <DonateButton id={p.id} title={p.title} tone="gold" />
+            <Button tone="text" href={enquiryUrl(p.title)}>
               Partner with this programme
             </Button>
             <Button tone="text" href={`/media/support/${p.source_document}`} download>
@@ -106,7 +112,7 @@ export default async function ProgrammePage({
           <SectionTitle>A defined capital scope.</SectionTitle>
           <p>This programme sets out a proposed scope for equipment and infrastructure.</p>
           <div className="budget-box">
-            <span>{p.budget ? 'Source planning allocation' : 'Proposed allocation'}</span>
+            <span>Estimated funding goal</span>
             <strong>{p.budget ? money(p.budget) : 'To be confirmed'}</strong>
             <small>Planning estimate · current funding status unconfirmed</small>
           </div>
@@ -151,11 +157,11 @@ export default async function ProgrammePage({
         <Accountability />
       </div>
       <section className="container section-pad programme-end">
-        <SectionTitle description="Partner with us to bring essential care closer to rural families.">
+        <SectionTitle description="Choose any amount you’d like to give. Our team will call you to discuss the programme and how to contribute.">
           Discuss support for {p.id === 'dialysis' ? 'kidney care' : p.title.toLowerCase()}.
         </SectionTitle>
         <div className="actions">
-          <Button href={enquiryUrl(p.title)}>Request a programme discussion</Button>
+          <DonateButton id={p.id} title={p.title} />
           <Button tone="outline" href="/funding#proposals">
             View related care programmes
           </Button>

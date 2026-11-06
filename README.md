@@ -35,17 +35,23 @@ npm run check:seo
 
 ## Included
 
-- Eight main routes and 15 individually generated programme routes, plus preview privacy/website information pages.
+- Campus doctor directory, three community programme pages and 15 individually generated funding programme pages.
 - Desktop and mobile compositions, supplied local fonts, responsive `<picture>` sources, SVG icons, cutouts and chapter edges.
 - Mobile navigation; commitment, service, journey, work and funding selectors; health-card flip/process; programme hotspots and accountability selector.
 - All 15 original programme DOCX downloads. PDFs were not supplied and are not simulated.
 - Programme-aware contact flow with required fields, native email validation, review/edit, and local draft download.
+- Donation callback forms on funding cards and programme pages, with server-side validation and a confirmation after acceptance.
 
 ## Content and launch status
 
 The owner approved production indexing on `https://www.antharagangaruralhospital.com`. The tracked release settings in `content/seo-release.mjs` enable 23 reviewed public routes only on a trusted production deployment. Vercel production and preview environments are detected separately. Other hosts require `DEPLOYMENT_ENVIRONMENT=production` at both build and runtime. Local development and previews remain non-indexable. This code change does not itself deploy the website or submit it to search engines.
 
-The form does not send email, register patients or store submissions. It explicitly offers a local draft. Before connecting delivery, provide the recipient/service, approve privacy and retention rules, add server-side validation/rate limiting, and show success only after confirmed delivery.
+The general contact form prepares a local draft. The donation callback form uses a separate endpoint.
+In development it stores preview requests in the ignored `.cache/donation-requests/` directory. Use synthetic details for local testing.
+
+For live callbacks, configure `DONATION_REQUEST_WEBHOOK_URL` and `DONATION_REQUEST_WEBHOOK_TOKEN` at runtime. The HTTPS receiver gets a bearer-authenticated JSON POST with the request ID, programme ID and name, donor name and phone number, and submission timestamp. The receiver should honour `Idempotency-Key` and return a 2xx only after recording the request for follow-up. Set rate limits at the deployment edge and agree on access and retention with the hospital team before opening the form to the public.
+
+Add verified doctor profiles to `content/doctors.ts`. Urgent funding badges follow the `urgent` flag in `content/programmes.ts`; confirm the flag and estimated goal with the hospital before launch.
 
 The owner supplied the public phone, email and regional address; these are maintained in `content/hospital.ts`. Current service availability, hours, street-level directions, leadership profiles and final health-card terms remain unconfirmed. The original proposals supply planning budgets, not live funding balances. Clinical imagery is illustrative. The existing draft privacy and website-information pages remain noindex and are excluded from the sitemap.
 

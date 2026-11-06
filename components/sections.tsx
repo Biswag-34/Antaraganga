@@ -1,31 +1,47 @@
 import Link from 'next/link';
 import { Button, FAQ, Icon, Media, SectionTitle } from './primitives';
 import { enquiryUrl, programmes } from '@/content/programmes';
+import { FundingCard } from './funding-card';
 export function FundingHighlights() {
-  const featured = ['dialysis', 'rehab', 'icu'].map((id) => programmes.find((p) => p.id === id)!);
+  const featured = ['emergency', 'dialysis', 'rehab'].map((id) =>
+    programmes.find((p) => p.id === id)!
+  );
   return (
-    <section className="funding-highlights section-pad">
+    <section className="funding-highlights section-pad" aria-labelledby="donation-intro-title">
       <div className="container">
+        <div className="donation-intro">
+          <div className="donation-intro-main">
+            <p className="fund-eyebrow">Individual giving</p>
+            <h2 id="donation-intro-title">Help bring care closer to home.</h2>
+            <p>
+              Your support helps Antharagange Rural Hospital equip essential services for families
+              in rural Kolar, including people with disabilities and patients who travel for ongoing
+              care.
+            </p>
+          </div>
+          <div className="donation-intro-guide">
+            <span className="icon-circle">
+              <Icon name="heart" />
+            </span>
+            <h3>Choose a programme. Give any amount.</h3>
+            <p>
+              You can contribute any amount to the programme you choose. Every gift goes towards its
+              overall funding goal. Select Donate and our team will walk you through the next steps
+              by phone.
+            </p>
+          </div>
+        </div>
         <div className="funding-highlights-heading">
-          <SectionTitle description="Explore practical ways to strengthen care for rural families.">
-            Help bring essential care closer.
+          <SectionTitle description="See what each project needs and who it can help.">
+            Featured funding programmes
           </SectionTitle>
           <Button href="/funding#proposals" tone="gold">
-            View all 15 funding proposals
+            View all {programmes.length} funding proposals
           </Button>
         </div>
-        <div className="funding-highlight-grid">
+        <div className="fund-card-grid">
           {featured.map((p) => (
-            <Link href={`/funding/${p.id}`} className="funding-highlight-card" key={p.id}>
-              <Media id={p.asset} />
-              <div>
-                <h3>{p.title}</h3>
-                <p>{p.need}</p>
-                <span className="funding-highlight-link">
-                  View funding proposal <span aria-hidden="true">→</span>
-                </span>
-              </div>
-            </Link>
+            <FundingCard key={p.id} programme={p} />
           ))}
         </div>
       </div>
@@ -234,14 +250,11 @@ export function Leadership() {
               <Icon name="community-first" />
             </span>
             <div>
-              <h3>Meet the hospital team</h3>
-              <p>
-                Approved leadership profiles and portraits will be added following hospital
-                confirmation.
-              </p>
+              <h3>Our campus doctors</h3>
+              <p>Visit the doctor directory for Antharagange Rural Hospital in Kolar.</p>
             </div>
-            <Button href={enquiryUrl('Meet the hospital team', 'hospital')} tone="text">
-              Speak with our team
+            <Button href="/team" tone="text">
+              View the doctor directory
             </Button>
           </div>
         </div>

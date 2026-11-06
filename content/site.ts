@@ -6,6 +6,7 @@ export const navigation = [
       { label: 'Our purpose', href: '/hospital#purpose' },
       { label: 'Our approach', href: '/hospital#approach' },
       { label: 'Our people', href: '/hospital#people' },
+      { label: 'Campus doctors', href: '/team' },
     ],
   },
   {
@@ -58,6 +59,7 @@ export const commitments = [
 ];
 export const workStories = [
   {
+    id: 'meenakshi-eye-care',
     title: 'Meenakshi eye care',
     heading: 'Helping people see a way forward.',
     description: 'Screening and cataract-care support.',
@@ -66,8 +68,16 @@ export const workStories = [
     tab: 'Eye care',
     steps: ['Screen', 'Refer', 'Follow up'],
     enquiry: 'Meenakshi eye care',
+    audience:
+      'For people in rural communities who may have difficulty accessing an eye examination or following up on a referral.',
+    details: [
+      'Community eye screening provides an initial check for vision concerns.',
+      'People who need a fuller examination can receive guidance on where to seek further assessment or cataract care.',
+      'Follow-up helps people and their families understand the next step after a referral.',
+    ],
   },
   {
+    id: 'rural-health-camps',
     title: 'Rural health camps',
     heading: 'Care where communities gather.',
     description: 'Screening and essential care close to home.',
@@ -76,8 +86,16 @@ export const workStories = [
     tab: 'Rural health camps',
     steps: ['Connect', 'Screen', 'Support'],
     enquiry: 'Community health camps',
+    audience:
+      'For rural families who face long journeys for a basic health check or help finding the right service.',
+    details: [
+      'Working with local partners brings screenings and health conversations to places where people already gather.',
+      'A camp can help identify health concerns that would benefit from a fuller assessment.',
+      'Participants who need further care can receive guidance on referrals and follow-up.',
+    ],
   },
   {
+    id: 'prachi-first-aid',
     title: 'PraChi first aid',
     heading: 'The first response can begin with us.',
     description: 'Practical first-aid skills for safer, stronger communities.',
@@ -86,6 +104,13 @@ export const workStories = [
     tab: 'PraChi first aid',
     steps: ['Learn', 'Practise', 'Respond'],
     enquiry: 'First-aid training',
+    audience:
+      'For community groups and local partners interested in building practical first-aid skills.',
+    details: [
+      'PraChi, short for Prathama Chikitse, introduces the role of a first responder and when to seek professional help.',
+      'Participants practise how to approach common first-aid situations and communicate what has happened.',
+      'Training helps people take the first steps while they arrange further assistance.',
+    ],
   },
 ];
 export type Service = {

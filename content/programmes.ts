@@ -12,6 +12,7 @@ export type Programme = {
   budget: number | null;
   category: string;
   disclosure?: string;
+  urgent?: boolean;
   fundingStatus: 'unconfirmed';
   statusUpdatedAt: string | null;
 };
@@ -85,6 +86,7 @@ const details: Record<
     ],
     budget: 900000,
     category: 'Critical care',
+    urgent: true,
   },
   dialysis: {
     heading: 'Bring dialysis closer to rural families.',
