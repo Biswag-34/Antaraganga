@@ -39,7 +39,7 @@ export function FundingCard({
         </div>
         <div className="fund-card-actions">
           <DonateButton id={programme.id} title={programme.title} />
-          <Button href={`/funding/${programme.id}`} tone="outline">
+          <Button href={`/funding/${programme.id}`} tone="text">
             Know more <span className="visually-hidden">about {programme.title}</span>
           </Button>
         </div>

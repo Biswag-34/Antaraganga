@@ -22,10 +22,13 @@ export default function Funding() {
             <br />
             for <em>rural Kolar.</em>
           </h1>
-          <p>Support clinical services, disability inclusion and community healthcare.</p>
+          <p>
+            Give any amount to support clinical services, disability inclusion and community
+            healthcare.
+          </p>
           <div className="actions">
             <Button tone="gold" href="#proposals">
-              View all 15 funding proposals
+              Donate to a programme
             </Button>
             <Button tone="text" href={enquiryUrl('Institutional partnership')}>
               Discuss a partnership

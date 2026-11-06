@@ -510,7 +510,7 @@ export function ProposalDirectory() {
     .filter((p) => category === 0 || p.category === categories[category])
     .sort((a, b) => Number(Boolean(b.urgent)) - Number(Boolean(a.urgent)));
   return (
-    <section className="container proposal-directory section-pad" id="proposals">
+    <section className="container proposal-directory section-pad" id="proposals" tabIndex={-1}>
       <div className="proposal-directory-heading">
         <SectionTitle description="Choose a programme and contribute any amount you’re comfortable giving.">
           Find a programme to support.
@@ -804,10 +804,14 @@ export function ReachExplorer() {
               <Media
                 id={s.image}
                 desktopVariant={s.image === '01-hero-hospital' ? 'mobile' : 'desktop'}
+                showCaption={false}
               />
               <div>
                 <h3>{s.title}</h3>
                 <p>{s.description}</p>
+                {s.image === '01-hero-hospital' && (
+                  <small className="reach-image-note">Architectural visualisation</small>
+                )}
               </div>
             </button>
           ))}

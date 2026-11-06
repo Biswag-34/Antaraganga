@@ -4,15 +4,7 @@ import { useId, useRef, useState, type FormEvent } from 'react';
 import { hospital } from '@/content/hospital';
 import { Icon } from './primitives';
 
-export function DonateButton({
-  id,
-  title,
-  tone = 'teal',
-}: {
-  id: string;
-  title: string;
-  tone?: 'teal' | 'gold';
-}) {
+export function DonateButton({ id, title }: { id: string; title: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const confirmation = useRef<HTMLHeadingElement>(null);
@@ -65,11 +57,12 @@ export function DonateButton({
       <button
         ref={trigger}
         type="button"
-        className={`button button--${tone}`}
+        className="button button--gold donate-button"
         aria-haspopup="dialog"
         aria-label={`Donate to ${title}`}
         onClick={open}
       >
+        <Icon name="heart" />
         Donate
       </button>
       <dialog

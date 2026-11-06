@@ -50,7 +50,7 @@ export default async function ProgrammePage({
             {`Support the proposed ${p.title.toLowerCase()} programme with any amount you choose. The scope and costs are planning estimates. Contact the hospital to confirm service availability.`}
           </p>
           <div className="actions">
-            <DonateButton id={p.id} title={p.title} tone="gold" />
+            <DonateButton id={p.id} title={p.title} />
             <Button tone="text" href={enquiryUrl(p.title)}>
               Partner with this programme
             </Button>
@@ -70,6 +70,15 @@ export default async function ProgrammePage({
           Download proposal
         </a>
       </nav>
+      <aside className="programme-donate-bar" aria-label="Support this programme">
+        <div className="container">
+          <p>
+            <strong>{p.title}</strong>
+            <span>Give any amount you choose</span>
+          </p>
+          <DonateButton id={p.id} title={p.title} />
+        </div>
+      </aside>
       <section className="programme-need container section-pad" id="need">
         <div>
           <SectionTitle description={p.need}>

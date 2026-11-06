@@ -853,6 +853,10 @@ h2:focus {
 .work-slide-caption {
   position: absolute;
   inset: auto 26% 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 16px;
+  align-items: center;
   padding: 60px 20px 22px;
   color: #fff;
   background: linear-gradient(transparent, #092e44e8);
@@ -862,13 +866,12 @@ h2:focus {
   font-size: 22px;
 }
 .work-slide-caption p {
+  grid-column: 1;
   color: #fff;
   font-size: 17px;
 }
 .work-slide-caption .round-arrow {
-  position: absolute;
-  right: 25px;
-  bottom: 25px;
+  grid-area: 1 / 2 / 3;
 }
 .selector {
   display: flex;
@@ -1341,9 +1344,13 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   height: 210px;
   border-radius: 12px;
 }
+.approach-preview > .media img,
+.service-panel > .media img {
+  object-position: center 25%;
+}
 .approach-preview > div:not(.media) {
   position: relative;
-  padding: 17px 42px 13px 13px;
+  padding: 17px 56px 13px 13px;
 }
 .approach-preview p {
   font-size: 14px;
@@ -1352,9 +1359,17 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 }
 .approach-preview a {
   position: absolute;
-  right: 10px;
-  top: 30px;
+  right: 6px;
+  top: 12px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   font-size: 28px;
+}
+.approach-preview a:hover {
+  background: var(--ice);
 }
 .vision-section {
   height: 325px;
@@ -1897,10 +1912,18 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 }
 .work-slide--feature {
   display: grid;
-  grid-template-columns: 1.7fr 1fr;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
   border-radius: 0;
-  height: 455px;
+  height: auto;
+  min-height: 455px;
   gap: 0;
+}
+.work-slide--feature > .media {
+  height: auto;
+}
+.work-slide--feature > .media > picture {
+  position: absolute;
+  inset: 0;
 }
 .work-story {
   padding: 40px;
@@ -1911,6 +1934,7 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
 .work-story > p {
   font-size: 18px;
   margin-top: 12px;
+  max-width: 46ch;
 }
 .story-steps {
   display: flex;
@@ -2195,6 +2219,12 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   font-size: 16px;
   line-height: 1.4;
   margin-top: 7px;
+}
+.reach-image-note {
+  display: block;
+  color: #c1d8e2;
+  font-size: 12px;
+  margin-top: 6px;
 }
 .reach-section > .container > small {
   display: block;
@@ -3742,10 +3772,10 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     width: min(100%, 440px);
   }
   .approach-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .approach-preview {
-    display: none;
+  .approach-grid .section-title {
+    grid-column: 1 / -1;
   }
   .approach-orbit {
     width: 230px;
@@ -3808,8 +3838,8 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     font-size: 34px;
   }
   .work-slide--feature {
-    grid-template-columns: 1.2fr 1fr;
-    height: 440px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    min-height: 440px;
   }
   .work-story {
     padding: 28px;
@@ -4281,8 +4311,9 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   }
   .menu-toggle {
     display: flex;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     font-size: 25px;
@@ -4302,8 +4333,9 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     border-top: 1px solid var(--line);
     box-shadow: 0 15px 25px #12344a26;
     padding: 15px 20px 25px;
-    max-height: calc(100dvh - 92px);
+    max-height: calc(100dvh - 99px);
     overflow-y: auto;
+    overscroll-behavior-y: contain;
   }
   .mobile-nav > div > a:first-child,
   .mobile-nav > a {
@@ -4465,13 +4497,20 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     padding-block: 15px;
   }
   .dots > button {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+  .dots > button::before {
+    content: '';
     width: 7px;
     height: 7px;
     background: #bfd4de;
-    padding: 0;
     border-radius: 50%;
   }
-  .dots > button.selected {
+  .dots > button.selected::before {
     background: var(--teal);
   }
   .home-work {
@@ -4528,10 +4567,8 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     font-size: 13px;
   }
   .work-slide-caption .round-arrow {
-    width: 30px;
-    height: 30px;
-    right: 15px;
-    bottom: 18px;
+    width: 44px;
+    height: 44px;
   }
   .selector > button {
     padding: 14px 8px;
@@ -4767,8 +4804,8 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     height: auto;
     border: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 136px), 1fr));
     gap: 8px;
   }
   .approach-orbit > button {
@@ -4778,20 +4815,20 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     min-height: 48px;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 8px;
     border: 1px solid var(--line);
     border-radius: 8px;
     background: #fff;
-    padding: 10px 18px;
+    padding: 10px;
     font-size: 14px;
     box-shadow: none;
   }
   .approach-orbit .icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
-  .approach-preview {
-    display: none;
+  .approach-preview > .media {
+    height: clamp(160px, 42vw, 230px);
   }
   .vision-section {
     height: 270px;
@@ -4928,16 +4965,14 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     height: 25px;
   }
   .service-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
     margin-top: 0;
   }
   .service-list {
-    display: flex;
-    order: 1;
-    overflow-x: auto;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 132px), 1fr));
+    gap: 8px;
     padding: 12px var(--gutter);
     border: 0;
     background: #ffffff80;
@@ -4945,17 +4980,15 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     margin-top: 6px;
   }
   .service-list > button {
-    width: auto;
-    min-width: 140px;
-    max-width: 190px;
-    flex-shrink: 0;
-    padding: 9px 12px;
+    min-width: 0;
+    padding: 9px 10px;
     min-height: 52px;
     border: 1px solid #cfe1e8;
     border-radius: 6px;
     background: #fff;
     font-size: 12px;
-    gap: 8px;
+    gap: 6px;
+    overflow-wrap: anywhere;
   }
   .service-list > button > span:last-child {
     display: none;
@@ -5159,6 +5192,7 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     display: flex;
     flex-direction: column;
     height: auto;
+    min-height: 0;
     gap: 0;
     border-radius: 0;
     margin: 20px var(--gutter) 0;
@@ -5924,13 +5958,18 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     white-space: normal;
   }
   .document-content {
+    flex-wrap: wrap;
     gap: 20px;
     padding: 18px;
     min-height: 230px;
   }
   .document-content > img {
     width: 105px;
-    height: 180px;
+    height: auto;
+  }
+  .document-content > div {
+    flex: 1 1 150px;
+    min-width: 0;
   }
   .document-content h3 {
     font-size: 16px;
@@ -5989,14 +6028,24 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     padding: 10px;
   }
   .programme-hero + .section-nav {
-    justify-content: flex-start;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr));
+    gap: 8px;
+    padding: 10px var(--gutter);
+    overflow: visible;
   }
-  .programme-hero + .section-nav > a {
-    font-size: 10px;
-    padding: 15px 7px;
+  .programme-hero + .section-nav > a:not(.section-download) {
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 8px;
+    min-height: 44px;
+    white-space: normal;
+    background: var(--ice);
+    border-radius: 6px;
   }
-  .programme-hero + .section-nav > a + a:before {
+  .programme-hero + .section-nav > a + a:before,
+  .programme-hero + .section-nav > a:first-child:after {
     display: none;
   }
   .programme-need {
@@ -6538,10 +6587,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   }
   .form-stepper {
     gap: 12px;
-  }
-  .programme-hero + .section-nav > a {
-    font-size: 9px;
-    padding-inline: 5px;
   }
   .hotspot-label {
     padding: 10px;
@@ -7300,8 +7345,9 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   }
   .menu-toggle {
     display: flex;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     padding: 8px;
@@ -7314,8 +7360,9 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     background: #fff;
     padding: 20px var(--gutter);
     box-shadow: 0 15px 25px #12344a26;
-    max-height: calc(100dvh - 120px);
+    max-height: calc(100dvh - 112px);
     overflow-y: auto;
+    overscroll-behavior-y: contain;
   }
   .mobile-nav a {
     display: flex;
