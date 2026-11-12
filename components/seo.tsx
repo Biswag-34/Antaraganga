@@ -1,4 +1,5 @@
 import { hospital } from '@/content/hospital';
+import { brandLogo } from '@/content/site';
 import { canonicalUrl, seoPages, siteName } from '@/lib/seo';
 
 function JsonLd({ data }: { data: object }) {
@@ -31,9 +32,9 @@ export function SiteStructuredData() {
             },
             logo: {
               '@type': 'ImageObject',
-              url: canonicalUrl('/media/support/brand/logo.png'),
-              width: 512,
-              height: 512,
+              url: canonicalUrl(brandLogo.src),
+              width: brandLogo.width,
+              height: brandLogo.height,
             },
           },
           {

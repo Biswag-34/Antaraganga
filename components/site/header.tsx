@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { navigation } from '@/content/site';
 import { Icon } from '@/components/primitives';
+import SiteLogo from './site-logo';
 export default function Header() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
@@ -107,14 +108,7 @@ export default function Header() {
         </div>
       </div>
       <div className="main-nav container">
-        <Link href="/" className="brand" aria-label="Antharagange Rural Hospital home">
-          <img
-            src="/media/support/brand/wordmark-concept.svg"
-            alt="Antharagange Rural Hospital & Research Institute"
-            width="310"
-            height="58"
-          />
-        </Link>
+        <SiteLogo className="brand" />
         <nav aria-label="Main navigation" className="desktop-nav">
           {navigation.map((n) => (
             <div

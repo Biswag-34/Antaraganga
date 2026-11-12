@@ -1,27 +1,12 @@
 import Link from 'next/link';
 import { hospital } from '@/content/hospital';
+import SiteLogo from './site-logo';
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-main">
         <div className="footer-brand">
-          <Link href="/" aria-label="Antharagange Rural Hospital home">
-            <img
-              className="footer-logo"
-              src="/media/support/brand/wordmark-concept.svg"
-              width="285"
-              height="53"
-              alt="Antharagange Rural Hospital & Research Institute"
-            />
-            <img
-              className="footer-logo-on-navy"
-              src="/media/support/brand/wordmark-concept-on-navy.svg"
-              width="285"
-              height="53"
-              alt=""
-              aria-hidden="true"
-            />
-          </Link>
+          <SiteLogo className="footer-logo" />
           <p>A charitable hospital for rural communities.</p>
         </div>
         <div>

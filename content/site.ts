@@ -1,3 +1,9 @@
+export const brandLogo = {
+  src: '/media/support/brand/arhri-logo.jpg',
+  width: 1536,
+  height: 1024,
+} as const;
+
 export const navigation = [
   {
     label: 'Our Hospital',
