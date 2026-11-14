@@ -2,7 +2,7 @@ import { AwaitingUpdate, CampusImage } from '@/components/hospital-progress';
 import styles from '@/components/hospital-pages.module.css';
 import { Button, Icon } from '@/components/primitives';
 import { PageStructuredData } from '@/components/seo';
-import { campusRendering, hospitalProgress } from '@/content/hospital-progress';
+import { campusRendering, floorPlans, hospitalProgress } from '@/content/hospital-progress';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata = pageMetadata('/hospital/progress');
@@ -21,13 +21,14 @@ export default function HospitalProgress() {
               Hospital <em>progress</em>
             </h1>
             <p className={styles.progressIntro}>
-              Follow the development of Antharagange Rural Hospital, from the campus plans to
-              construction milestones and future projects.
+              See how Antharagange Rural Hospital took shape in Kolar and explore the equipment and
+              facilities that future support can help provide.
             </p>
             <nav className={styles.progressNav} aria-label="Hospital progress sections">
               <a href="#current-phase">Current phase</a>
               <a href="#construction-milestones">Milestones</a>
               <a href="#campus-photos">Campus photos</a>
+              <a href="#floor-plans">Floor plans</a>
               <a href="#future-projects">Future projects</a>
             </nav>
           </div>
@@ -81,6 +82,27 @@ export default function HospitalProgress() {
               Site photos will be shared as they become available.
             </AwaitingUpdate>
           )}
+        </section>
+        <section id="floor-plans" aria-labelledby="floor-plans-heading">
+          <h2 id="floor-plans-heading">Floor plans</h2>
+          <p className={styles.floorPlanIntro}>
+            These drawings show the planned layout and facilities on each floor. Check with the
+            hospital for current service availability.
+          </p>
+          <div className={styles.floorPlanGrid}>
+            {floorPlans.map((plan) => (
+              <a
+                key={plan.src}
+                href={plan.src}
+                aria-label={`View full-size ${plan.caption.toLowerCase()}`}
+              >
+                <CampusImage photo={plan} />
+              </a>
+            ))}
+          </div>
+          <Button href="/care" tone="outline">
+            Explore care &amp; services
+          </Button>
         </section>
         <section id="future-projects" aria-labelledby="projects-heading">
           <h2 id="projects-heading">Future projects</h2>

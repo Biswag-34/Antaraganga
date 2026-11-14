@@ -352,6 +352,33 @@
   border-radius: 10px;
 }
 
+.floorPlanIntro {
+  margin-bottom: 20px;
+}
+
+.floorPlanGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 16px;
+}
+
+.floorPlanGrid a {
+  border-radius: 11px;
+}
+
+.floorPlanGrid figure {
+  height: 100%;
+}
+
+.floorPlanGrid img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.floorPlanGrid a:hover figcaption {
+  text-decoration: underline;
+}
+
 .milestones {
   display: grid;
   gap: 20px;

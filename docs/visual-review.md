@@ -8,9 +8,9 @@ All ten supplied boards were visually inspected: one system board and nine page-
 
 ## Intentional differences
 
-- The supplied concept wordmark is used; its artwork differs slightly from the logo drawn in the visualizations.
+- The owner-supplied ARHRI logo with the green second R is used in the header, footer, health card, social sharing image and favicon exports (updated 15 November 2026).
 - Clinical images are the mapped pack assets. Some board photographs are different compositions; no additional photographs were fabricated to recreate them.
-- Named leadership cards are replaced by a team enquiry pending verification. Institutional documentation, videos and procurement records are not fabricated.
+- Leadership profiles now follow Team2.pdf in two uniform board galleries. Institutional documentation, videos and procurement records are not fabricated.
 - DOCX download labels replace PDF labels because the pack provides DOCX originals.
 - Current services and proposed departments are not presented as verified operational facts. Funding allocations are labelled planning estimates; live remaining balances are omitted.
 - Mobile services include a scrollable service chooser to make every service reachable. The selected service appears first, following the reference's focus on one image/content panel.

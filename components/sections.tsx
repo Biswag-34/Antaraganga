@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button, FAQ, Icon, Media, SectionTitle } from './primitives';
 import { enquiryUrl, programmes } from '@/content/programmes';
 import { FundingCard } from './funding-card';
+import { BoardProfiles } from './board-profiles';
 export function FundingHighlights() {
   const featured = ['emergency', 'dialysis', 'rehab'].map((id) =>
     programmes.find((p) => p.id === id)!
@@ -242,23 +243,7 @@ export function Leadership() {
           </h3>
         </div>
       </section>
-      <section className="ice" id="people">
-        <div className="container section-pad">
-          <SectionTitle>The people behind the purpose.</SectionTitle>
-          <div className="leadership-placeholder">
-            <span className="icon-circle">
-              <Icon name="community-first" />
-            </span>
-            <div>
-              <h3>Our campus doctors</h3>
-              <p>Visit the doctor directory for Antharagange Rural Hospital in Kolar.</p>
-            </div>
-            <Button href="/team" tone="text">
-              View the doctor directory
-            </Button>
-          </div>
-        </div>
-      </section>
+      <BoardProfiles />
     </>
   );
 }

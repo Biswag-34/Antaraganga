@@ -20,7 +20,7 @@ function loadContent(relative) {
 const { navigation, commitments, workStories, services, careSteps } = loadContent('content/site.ts');
 const { programmes, enquiryUrl } = loadContent('content/programmes.ts');
 const { hospital } = loadContent('content/hospital.ts');
-const routes = ['/', '/hospital', '/care', '/work', '/network', '/health-card', '/funding', '/contact', '/privacy', '/terms', ...programmes.map(p => `/funding/${p.id}`)];
+const routes = ['/', '/hospital', '/care', '/work', '/impact', '/network', '/health-card', '/funding', '/contact', '/privacy', '/terms', ...programmes.map(p => `/funding/${p.id}`)];
 const rows = [];
 const interactive = 'components/interactive.tsx';
 const sections = 'components/sections.tsx';
@@ -51,16 +51,14 @@ for (const n of navigation) {
   link('*', 'Desktop main navigation', n.label, n.href, 'components/site/header.tsx', 'Header', 'Desktop navigation visible');
   n.children.forEach(c => link('*', `Desktop dropdown: ${n.label}`, c.label, c.href, 'components/site/header.tsx', 'Header', 'Parent menu hovered or keyboard-focused'));
 }
-link('*', 'Header CTA', 'Partner with Us', '/funding', 'components/site/header.tsx', 'Header', 'Header CTA visible at applicable viewport');
+link('*', 'Header CTA', 'Support the Hospital', '/funding', 'components/site/header.tsx', 'Header');
 action('*', 'Mobile navigation', 'Open navigation', 'Opens mobile menu; URL stays unchanged.', 'components/site/header.tsx', 'Header', 'Mobile menu closed');
 action('*', 'Mobile navigation', 'Close navigation', 'Closes mobile menu; URL stays unchanged. Escape also closes it.', 'components/site/header.tsx', 'Header', 'Mobile menu open');
 for (const n of navigation) {
   link('*', 'Mobile menu', n.label, n.href, 'components/site/header.tsx', 'Header', 'Mobile menu open; selecting closes menu');
   n.children.forEach(c => link('*', `Mobile submenu: ${n.label}`, c.label, c.href, 'components/site/header.tsx', 'Header', 'Mobile menu open; selecting closes menu'));
 }
-link('*', 'Mobile menu', 'Partner with Us', '/funding', 'components/site/header.tsx', 'Header', 'Mobile menu open; selecting closes menu');
 link('*', 'Mobile menu', 'Funding proposals — 15 programmes', '/funding#proposals', 'components/site/header.tsx', 'Header', 'Mobile menu open; selecting closes menu');
-link('*', 'Mobile menu', 'Contact & Collaborate', '/contact', 'components/site/header.tsx', 'Header', 'Mobile menu open; selecting closes menu');
 const footer = [
   ['Footer brand', 'Hospital logo', '/'],
   ['Footer hospital', 'Our Hospital', '/hospital'], ['Footer hospital', 'About us', '/hospital#purpose'],
@@ -72,8 +70,8 @@ const footer = [
 footer.forEach(([section, label, href]) => link('*', section, label, href, 'components/site/footer.tsx', 'Footer'));
 link('*', 'Footer contact', hospital.phone, hospital.phoneHref, 'components/site/footer.tsx', 'Footer');
 link('*', 'Footer contact', hospital.email, `mailto:${hospital.email}`, 'components/site/footer.tsx', 'Footer');
-link('/', 'Hero', 'Discover our hospital', '/hospital', 'app/page.tsx', 'Home');
-link('/', 'Hero', 'Explore our work', '/work', 'app/page.tsx', 'Home');
+link('/', 'Hero', 'Discover our hospital', '/hospital', 'components/home-hero.tsx', 'HomeHero');
+link('/', 'Hero', 'Support the Hospital', '/funding', 'components/home-hero.tsx', 'HomeHero');
 link('/', 'Funding proposal highlights', 'View all 15 funding proposals', '/funding#proposals', sections, 'FundingHighlights');
 for (const id of ['dialysis', 'rehab', 'icu']) {
   const p = programmes.find(p => p.id === id);
@@ -86,13 +84,15 @@ for (const c of commitments) {
 }
 arrows('/', 'Commitment mobile carousel', 'commitment', 'Selects a commitment', 'PurposeHome', 'Mobile carousel navigation visible');
 action('/', 'Commitment image mosaic', 'Swipe left / right', 'Changes selected commitment after a horizontal touch, mouse or pen drag of at least 50 pixels; vertical scrolling is preserved.', interactive, 'PurposeHome', 'Pointer input', 'Swipe gesture');
-arrows('/', 'Community work carousel', 'story', 'Changes work story', 'WorkCarousel');
-for (const s of workStories) {
-  action('/', 'Community work selector', s.tab, `Shows ${s.title}.`, interactive, 'WorkCarousel');
-  link('/', 'Community work slide arrow', `Explore ${s.title}`, '/work', interactive, 'WorkCarousel', `${s.title} story selected`);
+for (const route of ['/', '/work', '/impact']) {
+  for (const story of workStories) {
+    link(route, 'Community programme cards', 'View programme: ' + story.title, '/work/' + story.id, 'components/programme-cards.tsx', 'ProgrammeCards');
+  }
 }
-workStories.forEach(s => action('/', 'Community work preview', `Show next story: ${s.title}`, `Shows ${s.title} from the adjacent image preview.`, interactive, 'WorkCarousel', `${s.title} is the next story; desktop preview visible`));
-action('/', 'Community work slide', 'Swipe left / right', 'Changes selected story after a horizontal touch, mouse or pen drag of at least 50 pixels.', interactive, 'WorkCarousel', 'Pointer input', 'Swipe gesture');
+link('/', 'Hospital progress preview', 'Explore hospital progress', '/hospital/progress', 'components/hospital-progress.tsx', 'HospitalProgressPreview');
+link('/', 'Hospital progress preview', 'View floor plans', '/hospital/progress#floor-plans', 'components/hospital-progress.tsx', 'HospitalProgressPreview');
+link('/impact', 'Hospital activity', 'Explore care & services', '/care', 'app/impact/page.tsx', 'Impact');
+link('/impact', 'Support', 'Support the Hospital', '/funding', 'app/impact/page.tsx', 'Impact');
 link('/', 'Care continuum', 'Explore care & services', '/care', sections, 'CareContinuum');
 link('/', 'Partnership invitation card', 'Support a clinical programme', '/funding', sections, 'PartnershipInvite');
 link('/', 'Partnership invitation card', 'Collaborate with our team', enquiryUrl('Research, training and community initiatives', 'outreach'), sections, 'PartnershipInvite');
@@ -120,10 +120,6 @@ faq('/care', 'Caregiver support FAQ', ['What support can caregivers ask about?',
 link('/care', 'Caregiver support', 'Learn more about caregiver support', enquiryUrl('Caregiver support', 'hospital'), sections, 'SupportFamily');
 link('/care', 'Inclusive care invitation', 'Explore rehabilitation partnership', '/funding/rehab', sections, 'InclusiveCareInvite');
 link('/care', 'Inclusive care invitation', 'View all funding proposals', '/funding#proposals', sections, 'InclusiveCareInvite');
-['All programmes', ...workStories.map(s => s.tab)].forEach((label, i) => action('/work', 'Programme filter', label, `Shows ${workStories[Math.max(0, i - 1)].title}${i === 0 ? ' as the first story' : ''}.`, interactive, 'WorkCarousel'));
-workStories.forEach(s => link('/work', 'Featured programme CTA', 'Explore the programme', enquiryUrl(s.enquiry, 'outreach'), interactive, 'WorkCarousel', `${s.title} story selected`));
-arrows('/work', 'Featured programme carousel', 'story', 'Changes story and resets filter to All programmes', 'WorkCarousel');
-action('/work', 'Featured programme slide', 'Swipe left / right', 'Changes selected story after a horizontal drag of at least 50 pixels; resets the filter to All programmes, matching the arrows.', interactive, 'WorkCarousel', 'Pointer input', 'Swipe gesture');
 link('/work', 'First-aid feature', 'Explore first-aid training', enquiryUrl('First-aid training', 'outreach'), 'app/work/page.tsx', 'Work');
 faq('/work', 'Programme focus accordion', ['Early detection', 'Prevention', 'Continuity'], 'app/work/page.tsx', 'Work');
 link('/work', 'Bottom CTA', 'Discuss an outreach collaboration', enquiryUrl('Community programme', 'outreach'), 'app/work/page.tsx', 'Work');

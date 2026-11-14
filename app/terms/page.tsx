@@ -23,12 +23,6 @@ export default function Terms() {
         must not be added together. The original DOCX proposals contain the relevant scope and
         disclosures.
       </p>
-      <h2>Imagery</h2>
-      <p>
-        Clinical images are illustrative. The hospital hero is adapted from an architectural
-        rendering. Imagery is not evidence of actual staff, purchased equipment or operational
-        facilities.
-      </p>
     </article>
   );
 }

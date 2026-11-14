@@ -4,6 +4,8 @@ A responsive Next.js App Router website, built from the supplied desktop/mobile 
 
 Original input packs in `Media/`, design boards in `Visualization/`, and the original creation manual are preserved locally and excluded from Git. Generated audit reports, caches, dependencies and build output are also ignored. Keep `package-lock.json` committed so `npm ci` restores the recorded dependencies. The clickable inventory can be regenerated with `node scripts/inventory-clickables.cjs`; add `--verify` with the site running to validate it.
 
+The current owner-supplied logo and favicon exports are in `public/media/support/brand/`; the browser ICO is `app/favicon.ico`. `node scripts/prepare-brand-assets.cjs` reproduces the icons and social-share image directly from the supplied PNG. Superseded branding, earlier board portraits and media handoff files are archived locally under `Media/Archived-Support-Handoff/`, outside the public site and Git. Temporary asset exports in `tmp/`, `temp/`, `artifacts/` and `output/` are ignored too.
+
 ## Run
 
 Requires Node.js 20.9 or newer and npm.
@@ -35,7 +37,7 @@ npm run check:seo
 
 ## Included
 
-- Campus doctor directory, three community programme pages and 15 individually generated funding programme pages.
+- Trustee and Advisory Board profiles from Team2.pdf, a campus doctor directory, three community programme pages and 15 individually generated funding programme pages.
 - Desktop and mobile compositions, supplied local fonts, responsive `<picture>` sources, SVG icons, cutouts and chapter edges.
 - Mobile navigation; commitment, service, journey, work and funding selectors; health-card flip/process; programme hotspots and accountability selector.
 - All 15 original programme DOCX downloads. PDFs were not supplied and are not simulated.
@@ -60,7 +62,7 @@ Update `content/hospital-progress.ts` with the verified current phase, milestone
 
 Add verified doctor profiles to `content/doctors.ts`. Urgent funding badges follow the `urgent` flag in `content/programmes.ts`; confirm the flag and estimated goal with the hospital before launch.
 
-The owner supplied the public phone, email and regional address; these are maintained in `content/hospital.ts`. Current service availability, hours, street-level directions, leadership profiles and final health-card terms remain unconfirmed. The original proposals supply planning budgets, not live funding balances. Clinical imagery is illustrative. The existing draft privacy and website-information pages remain noindex and are excluded from the sitemap.
+The owner supplied the public phone, email and regional address; these are maintained in `content/hospital.ts`. Board names and membership follow Team2.pdf in `content/boards.ts`. Current service availability, hours, street-level directions and final health-card terms remain unconfirmed. The original proposals supply planning budgets, not live funding balances. Image provenance remains recorded in `content/media-manifest.json`; public illustrative-image notices have been removed at the owner's request. The existing draft privacy and website-information pages remain noindex and are excluded from the sitemap.
 
 See [SEO implementation and launch checks](docs/seo-implementation.md) for the audit mapping, production verification commands, optional overrides and remaining deployment/account actions.
 

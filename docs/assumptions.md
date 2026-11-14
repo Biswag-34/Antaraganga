@@ -16,7 +16,7 @@ Build date: 23 October 2026. Scope: the complete site requested by the user. The
 - The ambulance proposal states ₹25 lakh while item costs total ₹27 lakh. CT and X-ray allocations have source ranges; C-Arm overlaps the operation theatre proposal. These disclosures remain visible. Other overlapping allocations are disclosed globally and in originals.
 - Wound-care funding has no source capital allocation and displays “To be confirmed”.
 - Health-card artwork is a demo, not real patient data, insurance or entitlement. Process roles are proposed; no patient-registration backend is implied.
-- All clinical photographs are illustrative. Hospital hero derives from an architectural rendering. A footer notice and contextual captions identify the distinction.
+- Image provenance is recorded in `content/media-manifest.json`. Public illustrative-image notices were removed at the owner's request on 15 November 2026. The owner supplied the construction photographs and board portraits.
 - Original source documents are DOCX only; download labels reflect the actual format instead of the reference's PDF labels.
 - Real footage, institutional documents and audited records were not supplied. Still images do not have fake video controls. Document enquiries replace invented record downloads.
 - Contact delivery has no destination or provider. The two-step form validates, reviews and downloads a local draft; it never claims submission or delivery.

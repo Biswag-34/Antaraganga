@@ -356,14 +356,14 @@ h2:focus {
   display: block;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1256 / 472;
+  aspect-ratio: 1220 / 448;
 }
 .site-logo img {
-  /* Frame the artwork within the white margins of the supplied JPEG. */
+  /* Frame the original PNG artwork without its outer white margins. */
   position: absolute;
-  top: -50%;
-  left: -11.15%;
-  width: 122.3%;
+  top: -55.8036%;
+  left: -13.1148%;
+  width: 125.9016%;
   max-width: none;
   height: auto;
 }
@@ -455,6 +455,11 @@ h2:focus {
   position: absolute;
   inset: -14px 0 100%;
 }
+.nav-group:last-child .nav-dropdown {
+  right: 0;
+  left: auto;
+  transform-origin: top right;
+}
 .nav-dropdown a {
   padding: 12px;
   display: flex;
@@ -497,6 +502,7 @@ h2:focus {
   font-size: 14px;
   min-height: 44px;
   padding-inline: 20px;
+  white-space: nowrap;
 }
 .menu-toggle {
   display: none;
@@ -1553,18 +1559,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.architectural-caption {
-  position: absolute;
-  right: 18px;
-  top: 14px;
-  max-width: calc(100% - 36px);
-  padding: 5px 10px;
-  border-radius: 4px;
-  background: #092d43e8;
-  color: #fff;
-  font-size: 11px;
-  line-height: 1.4;
-}
 .care-overview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
@@ -2229,18 +2223,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   font-size: 16px;
   line-height: 1.4;
   margin-top: 7px;
-}
-.reach-image-note {
-  display: block;
-  color: #c1d8e2;
-  font-size: 12px;
-  margin-top: 6px;
-}
-.reach-section > .container > small {
-  display: block;
-  text-align: right;
-  color: #c1d8e2;
-  font-size: 11px;
 }
 .conversation-links {
   display: flex;
@@ -2963,13 +2945,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   width: 45px;
   height: 45px;
   margin: 7px 4px 0 18px;
-}
-.scope-disclaimer {
-  display: block;
-  text-align: right;
-  font-size: 11px;
-  color: var(--slate);
-  margin-top: 10px;
 }
 .funding-scope {
   display: grid;
@@ -3713,9 +3688,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   .desktop-nav {
     gap: 18px;
   }
-  .nav-partner {
-    display: none;
-  }
   .main-nav {
     height: 80px;
   }
@@ -4307,14 +4279,20 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   }
   .main-nav {
     height: 76px;
-    gap: 16px;
+    gap: 8px;
   }
   .brand {
-    width: 180px;
-    max-width: calc(100% - 48px);
+    width: min(40%, 180px);
+    margin-inline-end: auto;
   }
-  .desktop-nav,
-  .nav-partner {
+  .desktop-nav {
+    display: none;
+  }
+  .main-nav .nav-partner {
+    font-size: 12px;
+    padding-inline: 10px;
+  }
+  .nav-partner > span {
     display: none;
   }
   .menu-toggle {
@@ -6145,10 +6123,6 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     border-color: #71aaba;
     background: #f9fdff;
   }
-  .scope-disclaimer {
-    font-size: 10px;
-    text-align: left;
-  }
   .funding-scope {
     display: flex;
     flex-direction: column;
@@ -7069,6 +7043,29 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
     grid-column: 1 / -1;
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .main-nav {
+    gap: 12px;
+  }
+  .brand {
+    width: 160px;
+  }
+  .desktop-nav {
+    gap: 12px;
+  }
+  .nav-disclosure {
+    width: 22px;
+  }
+  .nav-group > a,
+  .nav-partner {
+    font-size: 13px;
+  }
+  .nav-partner {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+}
 @media (max-width: 767px) {
   /* Real space between page sections, with existing overlapping rails kept together. */
   main
@@ -7327,9 +7324,11 @@ main:has(#people:target) .hospital-section-nav > a[href='#people'] .chapter-numb
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .desktop-nav,
-  .nav-partner {
+  .desktop-nav {
     display: none;
+  }
+  .brand {
+    margin-inline-end: auto;
   }
   .menu-toggle {
     display: flex;

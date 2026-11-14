@@ -14,7 +14,7 @@
   {
     "path": "/hospital/progress",
     "title": "Hospital Progress | Antharagange Rural Hospital",
-    "description": "Explore the Antharagange Rural Hospital campus plans in Kolar and find construction updates, campus photos and future project proposals.",
+    "description": "See floor plans, photos and construction milestones from Antharagange Rural Hospital in Kolar, where care has begun and equipping continues.",
     "label": "Hospital progress"
   },
   {
@@ -25,9 +25,9 @@
   },
   {
     "path": "/team",
-    "title": "Campus Doctors | Antharagange Rural Hospital",
-    "description": "Find out about the doctor directory at Antharagange Rural Hospital in Kolar and ask the hospital about current doctor availability.",
-    "label": "Campus doctors"
+    "title": "Our People and Campus Doctors | Antharagange Rural Hospital",
+    "description": "Meet the Trustee Board and Advisory Board of Antharagange Rural Hospital in Kolar, and contact the hospital about current doctor availability.",
+    "label": "Our people"
   },
   {
     "path": "/care",
@@ -58,6 +58,12 @@
     "title": "PraChi First Aid | Antharagange Rural Hospital",
     "description": "Explore the PraChi programme and ask about practical first-aid training for your community.",
     "label": "PraChi first aid"
+  },
+  {
+    "path": "/impact",
+    "title": "Hospital and Community Impact | Antharagange Rural Hospital",
+    "description": "Read confirmed hospital and community activity at Antharagange Rural Hospital in Kolar and see what further support can help provide.",
+    "label": "Impact"
   },
   {
     "path": "/network",
@@ -92,7 +98,7 @@
   {
     "path": "/terms",
     "title": "Website Terms | Antharagange Rural Hospital",
-    "description": "Read about the website preview, unconfirmed service availability, proposed facilities, planning estimates and illustrative imagery.",
+    "description": "Read about the website preview, service availability, proposed facilities and programme planning estimates.",
     "label": "Website information"
   },
   {

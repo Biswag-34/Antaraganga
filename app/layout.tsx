@@ -27,7 +27,10 @@ export const metadata: Metadata = {
   description:
     'Compassionate healthcare for rural families and people with disabilities in Kolar, Karnataka. Explore care, community programmes and institutional partnerships.',
   icons: {
-    icon: [{ url: '/media/support/brand/favicon.svg', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/media/support/brand/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/media/support/brand/favicon-48.png', sizes: '48x48', type: 'image/png' },
+    ],
     apple: [
       { url: '/media/support/brand/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],

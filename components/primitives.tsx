@@ -18,13 +18,11 @@ export function Media({
   className = '',
   priority = false,
   desktopVariant = 'desktop',
-  showCaption = true,
 }: {
   id: string;
   className?: string;
   priority?: boolean;
   desktopVariant?: 'desktop' | 'mobile';
-  showCaption?: boolean;
 }) {
   const a = getMedia(id);
   const desktop = a.variants[desktopVariant];
@@ -52,9 +50,6 @@ export function Media({
           fetchPriority={priority ? 'high' : 'auto'}
         />
       </picture>
-      {id === '01-hero-hospital' && showCaption && (
-        <figcaption className="architectural-caption">Architectural visualisation</figcaption>
-      )}
     </figure>
   );
 }

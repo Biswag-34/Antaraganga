@@ -19,7 +19,7 @@ export const hospital = {
   email: 'antaraganga2019@gmail.com',
   operatingStatus: 'requires-confirmation',
   leadership: [],
-  brandingStatus: 'concept-awaiting-approval',
+  brandingStatus: 'owner-supplied',
 } as const;
 
 export const locations: Location[] = [

@@ -19,6 +19,7 @@ const routes = [
   '/work/meenakshi-eye-care',
   '/work/rural-health-camps',
   '/work/prachi-first-aid',
+  '/impact',
   '/network',
   '/health-card',
   '/funding',
@@ -28,6 +29,7 @@ const routes = [
   ...mapping.map((p) => `/funding/${p.id}`),
 ];
 const failures = [];
+const metadataAssets = ['/favicon.ico'];
 const htmlByRoute = new Map();
 for (const route of routes) {
   try {
@@ -92,10 +94,25 @@ for (const asset of assetPaths) {
     failures.push(`Missing asset: ${asset}`);
   }
 }
+for (const asset of metadataAssets) {
+  try {
+    const response = await fetch(`${base}${asset}`);
+    assert.equal(response.status, 200, `${asset}: HTTP ${response.status}`);
+    const bytes = Buffer.from(await response.arrayBuffer());
+    assert(bytes.length > 6 && bytes.readUInt16LE(2) === 1, `${asset}: invalid icon`);
+  } catch (error) {
+    failures.push(error.message);
+  }
+}
 for (const [route, html] of htmlByRoute) {
   for (const m of html.matchAll(/href="(\/[^"#]*)"/g)) {
     const target = new URL(m[1].replaceAll('&amp;', '&'), base).pathname;
-    if (!target.startsWith('/media/') && !target.startsWith('/_next/') && !routes.includes(target))
+    if (
+      !target.startsWith('/media/') &&
+      !target.startsWith('/_next/') &&
+      !metadataAssets.includes(target) &&
+      !routes.includes(target)
+    )
       failures.push(`Unknown internal link: ${route} → ${target}`);
   }
   for (const m of html.matchAll(/href="(\/[^"?]*)?(?:\?[^"#]*)?#([^"\s]+)"/g)) {

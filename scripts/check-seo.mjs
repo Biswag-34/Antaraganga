@@ -175,7 +175,6 @@ await check('all care summaries are in server HTML', async () => {
   const html = htmlByPath.get('/care');
   for (const id of ['rural', 'rehabilitation', 'mental', 'wound', 'kidney', 'eye', 'telemedicine'])
     assert(html.includes(`id="care-${id}"`));
-  assert(htmlByPath.get('/').includes('Architectural visualisation'));
 });
 await check('unknown pages stay genuine 404s', async () => {
   for (const path of ['/not-a-page', '/funding/not-a-programme']) {
@@ -191,6 +190,8 @@ await check('share image and icons have correct media types and dimensions', asy
     ['social-share.png', 1200, 630],
     ['apple-touch-icon.png', 180, 180],
     ['logo.png', 512, 512],
+    ['favicon-32.png', 32, 32],
+    ['favicon-48.png', 48, 48],
   ]) {
     const response = await request(`/media/support/brand/${file}`);
     assert.equal(response.status, 200);
@@ -203,6 +204,11 @@ await check('share image and icons have correct media types and dimensions', asy
   const icon = await request('/media/support/brand/favicon.svg');
   assert.equal(icon.status, 200);
   assert.match(icon.headers.get('content-type'), /image\/svg\+xml/);
+  const icoResponse = await request('/favicon.ico');
+  assert.equal(icoResponse.status, 200);
+  const icoBytes = Buffer.from(await icoResponse.arrayBuffer());
+  assert.equal(icoBytes.readUInt16LE(2), 1);
+  assert.equal(icoBytes.readUInt16LE(4), 4);
 });
 await check('15 original proposals remain downloadable with noindex headers', async () => {
   for (const programme of mapping) {

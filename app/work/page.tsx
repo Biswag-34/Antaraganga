@@ -1,7 +1,7 @@
 import { pageMetadata } from '@/lib/seo';
 import { PageStructuredData } from '@/components/seo';
 import { Button, FAQ, Icon, Media, SectionTitle } from '@/components/primitives';
-import { WorkCarousel } from '@/components/interactive';
+import { ProgrammeCards } from '@/components/programme-cards';
 import { LandscapeCTA } from '@/components/sections';
 import { enquiryUrl } from '@/content/programmes';
 export const metadata = pageMetadata('/work');
@@ -24,7 +24,7 @@ export default function Work() {
           <p>Screening, prevention and practical support in the community.</p>
         </div>
       </section>
-      <WorkCarousel feature />
+      <ProgrammeCards heading="Community programmes" />
       <section className="ice community-section">
         <div className="container section-pad">
           <SectionTitle>

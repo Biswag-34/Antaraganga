@@ -210,8 +210,12 @@ export default function Header() {
             </div>
           ))}
         </nav>
-        <Link href="/funding" className="button button--teal nav-partner">
-          Partner with Us <span aria-hidden="true">→</span>
+        <Link
+          href="/funding"
+          className="button button--teal nav-partner"
+          onClick={() => setOpen(false)}
+        >
+          Support the Hospital <span aria-hidden="true">→</span>
         </Link>
         <button
           className="menu-toggle"
@@ -253,12 +257,6 @@ export default function Header() {
         ))}
         <Link className="mobile-proposals" href="/funding#proposals" onClick={() => setOpen(false)}>
           Funding proposals <span>15 programmes →</span>
-        </Link>
-        <Link href="/funding" onClick={() => setOpen(false)}>
-          Partner with Us →
-        </Link>
-        <Link href="/contact" onClick={() => setOpen(false)}>
-          Contact & Collaborate →
         </Link>
       </nav>
     </header>

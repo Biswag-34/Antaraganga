@@ -1,5 +1,5 @@
 export const brandLogo = {
-  src: '/media/support/brand/arhri-logo.jpg',
+  src: '/media/support/brand/arhri-logo-green-r.webp',
   width: 1536,
   height: 1024,
 } as const;
@@ -9,36 +9,38 @@ export const navigation = [
     label: 'Our Hospital',
     href: '/hospital',
     children: [
-      { label: 'Hospital progress', href: '/hospital/progress' },
-      { label: 'Careers', href: '/careers' },
       { label: 'Our purpose', href: '/hospital#purpose' },
       { label: 'Our approach', href: '/hospital#approach' },
       { label: 'Our people', href: '/hospital#people' },
-      { label: 'Campus doctors', href: '/team' },
+      { label: 'Facilities and Development', href: '/hospital/progress' },
     ],
   },
   {
-    label: 'Care & Services',
+    label: 'Care and Services',
     href: '/care',
     children: [
       { label: 'Care overview', href: '/care' },
+      { label: 'Campus doctors', href: '/team#doctor-directory' },
       { label: 'Health-card initiative', href: '/health-card' },
     ],
   },
   {
-    label: 'Our Work',
+    label: 'Community Programmes',
     href: '/work',
     children: [
-      { label: 'Community programmes', href: '/work' },
-      { label: 'First-aid training', href: '/work#first-aid' },
+      { label: 'Meenakshi eye care', href: '/work/meenakshi-eye-care' },
+      { label: 'Rural health camps', href: '/work/rural-health-camps' },
+      { label: 'PraChi first aid', href: '/work/prachi-first-aid' },
     ],
   },
   {
-    label: 'Locations',
-    href: '/network',
+    label: 'Visit and Contact',
+    href: '/contact',
     children: [
+      { label: 'Plan a visit', href: '/network' },
       { label: 'Hospital campus', href: '/network#campus' },
       { label: 'Community outreach', href: '/network#outreach' },
+      { label: 'Careers', href: '/careers' },
     ],
   },
 ];

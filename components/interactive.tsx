@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button, Icon, Media, SectionTitle } from './primitives';
-import { careSteps, commitments, services, workStories } from '@/content/site';
+import { careSteps, commitments, services } from '@/content/site';
 import { enquiryUrl, programmes } from '@/content/programmes';
 import { useSwipe } from './use-swipe';
 import { FundingCard } from './funding-card';
@@ -166,92 +166,6 @@ export function PurposeHome() {
         ))}
       </div>
     </section>
-  );
-}
-export function WorkCarousel({ feature = false }: { feature?: boolean }) {
-  const [selected, setSelected] = useState(0);
-  const [filter, setFilter] = useState(0);
-  const story = workStories[selected];
-  const showStory = (index: number) => {
-    setSelected(index);
-    setFilter(0);
-  };
-  const swipe = useSwipe((direction) => {
-    setSelected((current) => (current + direction + workStories.length) % workStories.length);
-    setFilter(0);
-  });
-  return (
-    <div className={feature ? 'work-explorer' : 'home-work container section-pad'}>
-      {!feature && (
-        <div className="title-row">
-          <SectionTitle>Care that reaches the community.</SectionTitle>
-          <CarouselControls index={selected} total={3} onChange={showStory} />
-        </div>
-      )}
-      {feature && (
-        <Selector
-          labels={['All programmes', ...workStories.map((s) => s.tab)]}
-          selected={filter}
-          onChange={(i) => {
-            setFilter(i);
-            setSelected(Math.max(0, i - 1));
-          }}
-        />
-      )}
-      <div className={`work-slide ${feature ? 'work-slide--feature' : ''}`} {...swipe}>
-        <Media id={story.image} />
-        {feature ? (
-          <div className="work-story navy" aria-live="polite">
-            <h2>{story.heading}</h2>
-            <p>{story.description}</p>
-            <div className="story-steps">
-              {story.steps.map((s, i) => (
-                <div key={s}>
-                  <span className="icon-circle">
-                    <Icon name={i === 0 ? story.icon : i === 1 ? 'file-text' : 'community-first'} />
-                  </span>
-                  <span>{s}</span>
-                </div>
-              ))}
-            </div>
-            <Button tone="text" href={`/work/${story.id}`}>
-              Explore the programme
-            </Button>
-            <CarouselControls index={selected} total={3} onChange={showStory} />
-          </div>
-        ) : (
-          <>
-            <div className="work-slide-caption" aria-live="polite">
-              <strong>{story.title}</strong>
-              <p>{story.description}</p>
-              <Link
-                href={`/work/${story.id}`}
-                className="round-arrow"
-                aria-label={`Explore ${story.title}`}
-              >
-                →
-              </Link>
-            </div>
-            <button
-              className="next-story"
-              data-swipe-item
-              aria-label={`Show next story: ${workStories[(selected + 1) % workStories.length].title}`}
-              onClick={() => showStory((selected + 1) % workStories.length)}
-            >
-              <Media id={workStories[(selected + 1) % workStories.length].image} />
-            </button>
-          </>
-        )}
-      </div>
-      {!feature && (
-        <Selector
-          labels={workStories.map((s) => s.tab)}
-          icons={workStories.map((s) => s.icon)}
-          selected={selected}
-          onChange={setSelected}
-        />
-      )}
-    </div>
   );
 }
 export function MissionExplorer() {
@@ -642,7 +556,7 @@ export function HealthCard() {
       >
         <img
           src={`/media/support/cards/health-card-${flipped ? 'back' : 'front'}.svg`}
-          alt={`Demo health card ${flipped ? 'back' : 'front'} — sample patient, not a real identity`}
+          alt={`Health card ${flipped ? 'back with eligibility information' : 'front with sample member details'}`}
           width="540"
           height="340"
         />
@@ -804,19 +718,14 @@ export function ReachExplorer() {
               <Media
                 id={s.image}
                 desktopVariant={s.image === '01-hero-hospital' ? 'mobile' : 'desktop'}
-                showCaption={false}
               />
               <div>
                 <h3>{s.title}</h3>
                 <p>{s.description}</p>
-                {s.image === '01-hero-hospital' && (
-                  <small className="reach-image-note">Architectural visualisation</small>
-                )}
               </div>
             </button>
           ))}
         </div>
-        <small>Illustrative care model · Exact locations and schedules to be confirmed.</small>
       </div>
     </section>
   );
@@ -857,9 +766,6 @@ export function ProgrammeScope({ scope, image }: { scope: string[]; image: strin
           </button>
         ))}
       </div>
-      <small className="scope-disclaimer">
-        Illustrative service layout; not a final room plan.
-      </small>
     </div>
   );
 }

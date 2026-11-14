@@ -1,6 +1,7 @@
 import { Button, Icon } from '@/components/primitives';
 import { campusRendering, hospitalProgress, type CampusPhoto } from '@/content/hospital-progress';
 import styles from './hospital-pages.module.css';
+import homeStyles from './home-sections.module.css';
 
 export function CampusImage({ photo, eager = false }: { photo: CampusPhoto; eager?: boolean }) {
   return (
@@ -19,18 +20,46 @@ export function CampusImage({ photo, eager = false }: { photo: CampusPhoto; eage
 
 export function HospitalProgressPreview() {
   const { current, photos } = hospitalProgress;
+  const exteriorPhoto = photos[0] ?? campusRendering;
+  const interiorPhoto = photos[2];
   return (
-    <section className={styles.progressPreview} aria-labelledby="hospital-progress-preview">
-      <div className={'container ' + styles.previewInner}>
-        <CampusImage photo={photos[0] ?? campusRendering} />
-        <div className={styles.previewCopy}>
-          <p className={styles.eyebrow}>Our hospital · Kolar, Karnataka</p>
+    <section className={homeStyles.progress} aria-labelledby="hospital-progress-preview">
+      <div className={'container ' + homeStyles.progressInner}>
+        <div className={homeStyles.progressPhotos}>
+          <figure className={homeStyles.exterior}>
+            <img
+              src={exteriorPhoto.src}
+              alt={exteriorPhoto.alt}
+              width={exteriorPhoto.width}
+              height={exteriorPhoto.height}
+              loading="lazy"
+            />
+          </figure>
+          {interiorPhoto && (
+            <figure className={homeStyles.interior}>
+              <img
+                src={interiorPhoto.src}
+                alt={interiorPhoto.alt}
+                width={interiorPhoto.width}
+                height={interiorPhoto.height}
+                loading="lazy"
+              />
+            </figure>
+          )}
+        </div>
+        <div className={homeStyles.progressCopy}>
+          <p className={homeStyles.eyebrow}>The Kolar campus</p>
           <h2 id="hospital-progress-preview">Hospital progress</h2>
           <p>
             {current?.summary ??
               'Explore the Kolar campus plans and check back for construction milestones and site photos.'}
           </p>
-          <Button href="/hospital/progress">Explore hospital progress</Button>
+          <div className={homeStyles.progressLinks}>
+            <Button href="/hospital/progress">Explore hospital progress</Button>
+            <Button href="/hospital/progress#floor-plans" tone="text">
+              View floor plans
+            </Button>
+          </div>
         </div>
       </div>
     </section>
