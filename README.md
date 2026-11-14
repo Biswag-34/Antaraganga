@@ -41,6 +41,7 @@ npm run check:seo
 - All 15 original programme DOCX downloads. PDFs were not supplied and are not simulated.
 - Programme-aware contact flow with required fields, native email validation, review/edit, and local draft download.
 - Donation callback forms on funding cards and programme pages, with server-side validation and a confirmation after acceptance.
+- Careers with current openings and a CV application form, plus a hospital progress page and homepage preview.
 
 ## Content and launch status
 
@@ -50,6 +51,12 @@ The general contact form prepares a local draft. The donation callback form uses
 In development it stores preview requests in the ignored `.cache/donation-requests/` directory. Use synthetic details for local testing.
 
 For live callbacks, configure `DONATION_REQUEST_WEBHOOK_URL` and `DONATION_REQUEST_WEBHOOK_TOKEN` at runtime. The HTTPS receiver gets a bearer-authenticated JSON POST with the request ID, programme ID and name, donor name and phone number, and submission timestamp. The receiver should honour `Idempotency-Key` and return a 2xx only after recording the request for follow-up. Set rate limits at the deployment edge and agree on access and retention with the hospital team before opening the form to the public.
+
+Career applications go through `/api/career-applications`. In development, sample submissions are saved as JSON in the ignored `.cache/career-applications/` directory, with the CV in the `cvBase64` field. Keep real applicant data out of the preview.
+
+For live applications, set `CAREER_APPLICATION_WEBHOOK_URL` and `CAREER_APPLICATION_WEBHOOK_TOKEN` at runtime. The HTTPS receiver gets a bearer-authenticated multipart POST with `id`, `name`, `email`, `phone`, `role`, `submittedAt` (ISO 8601), and `cv` (PDF up to 4 MB). The receiver should honour the `Idempotency-Key` header and return a 2xx after recording the application.
+
+Update `content/hospital-progress.ts` with the verified current phase, milestones, future projects and campus photo metadata. Place the corresponding photos in `public/media/`.
 
 Add verified doctor profiles to `content/doctors.ts`. Urgent funding badges follow the `urgent` flag in `content/programmes.ts`; confirm the flag and estimated goal with the hospital before launch.
 

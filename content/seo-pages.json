@@ -12,6 +12,18 @@
     "label": "Our hospital"
   },
   {
+    "path": "/hospital/progress",
+    "title": "Hospital Progress | Antharagange Rural Hospital",
+    "description": "Explore the Antharagange Rural Hospital campus plans in Kolar and find construction updates, campus photos and future project proposals.",
+    "label": "Hospital progress"
+  },
+  {
+    "path": "/careers",
+    "title": "Careers and Current Openings | Antharagange Rural Hospital",
+    "description": "Browse current nursing, technical, administrative and support openings at Antharagange Rural Hospital in Kolar and submit your CV.",
+    "label": "Careers"
+  },
+  {
     "path": "/team",
     "title": "Campus Doctors | Antharagange Rural Hospital",
     "description": "Find out about the doctor directory at Antharagange Rural Hospital in Kolar and ask the hospital about current doctor availability.",
@@ -74,7 +86,7 @@
   {
     "path": "/privacy",
     "title": "Privacy Notice | Antharagange Rural Hospital",
-    "description": "Read how this website preview handles enquiry drafts in page memory and on your device. Online delivery and a hospital database are not connected.",
+    "description": "Learn how Antharagange Rural Hospital handles enquiry drafts, donation callback requests and career applications.",
     "label": "Privacy"
   },
   {

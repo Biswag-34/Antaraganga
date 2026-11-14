@@ -22,6 +22,12 @@ export default function Privacy() {
         The hospital must approve its privacy notice, contact information, retention practices and
         any form-delivery service before collecting real enquiries online.
       </p>
+      <h2>Career applications</h2>
+      <p>
+        The careers form collects your name, email, phone number, position and CV for recruitment.
+        Local test applications are saved on the preview server. On the live site, submissions go to
+        the hospital’s configured recruitment service.
+      </p>
     </article>
   );
 }

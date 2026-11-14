@@ -12,6 +12,8 @@ export default function Footer() {
         <div>
           <Link href="/hospital">Our Hospital</Link>
           <Link href="/hospital#purpose">About us</Link>
+          <Link href="/hospital/progress">Hospital progress</Link>
+          <Link href="/careers">Careers</Link>
         </div>
         <div>
           <Link href="/care">Care & Services</Link>

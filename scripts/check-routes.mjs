@@ -11,6 +11,8 @@ const manifest = JSON.parse(
 const routes = [
   '/',
   '/hospital',
+  '/hospital/progress',
+  '/careers',
   '/team',
   '/care',
   '/work',

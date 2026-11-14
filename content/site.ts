@@ -9,6 +9,8 @@ export const navigation = [
     label: 'Our Hospital',
     href: '/hospital',
     children: [
+      { label: 'Hospital progress', href: '/hospital/progress' },
+      { label: 'Careers', href: '/careers' },
       { label: 'Our purpose', href: '/hospital#purpose' },
       { label: 'Our approach', href: '/hospital#approach' },
       { label: 'Our people', href: '/hospital#people' },

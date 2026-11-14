@@ -1,4 +1,5 @@
 import { Button, SplitHero } from '@/components/primitives';
+import { HospitalProgressPreview } from '@/components/hospital-progress';
 import { PurposeHome, WorkCarousel } from '@/components/interactive';
 import { CareContinuum, FundingHighlights, PartnershipInvite } from '@/components/sections';
 import { pageMetadata } from '@/lib/seo';
@@ -26,6 +27,7 @@ export default function Home() {
           Explore our work
         </Button>
       </SplitHero>
+      <HospitalProgressPreview />
       <PurposeHome />
       <FundingHighlights />
       <WorkCarousel />

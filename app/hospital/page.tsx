@@ -22,6 +22,9 @@ export default function Hospital() {
             <Button href="#approach" tone="text">
               Our approach
             </Button>
+            <Button href="/hospital/progress" tone="text">
+              Hospital progress
+            </Button>
           </div>
         </div>
       </section>
